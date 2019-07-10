@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from './Title';
-import TextInput from './TextInput';
 
 const HeaderBlock = styled.header`
   z-index: 200;
@@ -13,13 +11,8 @@ const HeaderBlock = styled.header`
   background-color: #f1f2f6;
 `;
 
-function Header() {
-  return (
-    <HeaderBlock>
-      <Title />
-      <TextInput />
-    </HeaderBlock>
-  );
+function Header({ children }) {
+  return <HeaderBlock>{children}</HeaderBlock>;
 }
 
 export default Header;

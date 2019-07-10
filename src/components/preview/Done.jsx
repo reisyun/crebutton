@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import doneSVG from '../../assets/images/done.svg';
-import { verticalSlide } from '../../lib/keyframes.js';
+import { vertical } from '../../lib/keyframes.js';
 
 const DoneBlock = styled.div`
   z-index: 200;
@@ -21,15 +21,15 @@ const Strong = styled.strong`
   font-weight: 500;
   text-transform: uppercase;
 `;
-const Icon = styled.object.attrs({
-  type: 'image/svg+xml',
-})`
+const DoneIcon = styled.img.attrs(props => ({
+  src: props.svg,
+}))`
   margin-left: 0.5rem;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 
   ${DoneBlock}:hover & {
-    animation: ${verticalSlide} 1s infinite;
+    animation: ${vertical} 1s infinite;
   }
 `;
 
@@ -37,7 +37,7 @@ function Done() {
   return (
     <DoneBlock>
       <Strong>Done</Strong>
-      <Icon data={doneSVG} />
+      <DoneIcon svg={doneSVG} />
     </DoneBlock>
   );
 }

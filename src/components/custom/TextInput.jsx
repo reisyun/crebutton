@@ -8,10 +8,10 @@ const TextInputBlock = styled.div`
 `;
 const Input = styled.input.attrs({
   type: 'text',
-  placeholder: '버튼에 들어갈 값을 입력해주세요.',
+  placeholder: '버튼에 들어갈 값을 입력해주세요',
 })`
   all: unset;
-  padding: 0 0.75rem;
+  padding: 0 0.5rem;
   width: 100%;
   height: 2.25rem;
   border-bottom: 4px solid #000;
@@ -21,10 +21,10 @@ const Input = styled.input.attrs({
   }
 `;
 
-function TextInput({ text, onChange }) {
+function TextInput({ text, onChangeText }) {
   return (
     <TextInputBlock>
-      <Input value={text} onChange={onChange} />
+      <Input value={text} onChange={onChangeText} />
     </TextInputBlock>
   );
 }

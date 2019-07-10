@@ -9,7 +9,6 @@ const CopyBlock = styled.div`
 `;
 const CopyToClipboard = styled.span`
   cursor: pointer;
-  user-select: none;
   transform: translateY(0);
   color: #fff;
   font-size: 5rem;
@@ -25,10 +24,24 @@ const CopyToClipboard = styled.span`
   }
 `;
 
-function Copy() {
+const { useState } = React;
+
+function Copy({ copy = 'copy' }) {
+  const [copied, setCopied] = useState(true);
+
+  const handleResult = () => {
+    setCopied(false);
+
+    setTimeout(() => {
+      setCopied(true);
+    }, 1000);
+  };
+
   return (
     <CopyBlock>
-      <CopyToClipboard>copy</CopyToClipboard>
+      <CopyToClipboard onClick={handleResult}>
+        {copied ? 'copy' : 'copied'}
+      </CopyToClipboard>
     </CopyBlock>
   );
 }

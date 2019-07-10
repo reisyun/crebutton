@@ -1,10 +1,10 @@
 import { keyframes } from 'styled-components';
 
-export const verticalSlide = keyframes`
+export const vertical = keyframes`
   from, to {
-    margin-top: 0px;
+    margin-top: 0rem;
   }
   50% {
-    margin-top: -5px;
+    margin-top: -0.5rem;
   }
 `;

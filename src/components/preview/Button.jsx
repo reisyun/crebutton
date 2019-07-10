@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const MyButton = styled.button`
+const MyButton = styled.button.attrs(props => ({
+  disabled: props.disabled,
+}))`
   all: unset;
   z-index: 200;
   cursor: pointer;
@@ -27,8 +29,26 @@ const MyButton = styled.button`
   }
 `;
 
-function Button({ text }) {
-  return <MyButton>{text}</MyButton>;
+const { useState } = React;
+
+function Button({ text, onSlideBarControl }) {
+  // Prevent duplicate clicks
+  const [disabled, setDisabled] = useState(false);
+
+  const duplicateClicks = () => {
+    !disabled && setDisabled(true);
+    setTimeout(() => {
+      setDisabled(false);
+    }, 700);
+  };
+
+  return (
+    <MyButton
+      disabled={disabled}
+      onClick={() => duplicateClicks() || onSlideBarControl()}>
+      {text ? text : 'Click this'}
+    </MyButton>
+  );
 }
 
 export default Button;
