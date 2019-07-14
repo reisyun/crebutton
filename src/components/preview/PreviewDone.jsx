@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import doneSVG from '../../assets/images/done.svg';
 import { vertical } from '../../lib/keyframes.js';
 
-const DoneBlock = styled.div`
+const PreviewDoneBlock = styled.div`
   z-index: 200;
   cursor: pointer;
   position: absolute;
@@ -16,7 +16,7 @@ const DoneBlock = styled.div`
   padding: 0.5rem 0;
   background-color: #fbc531;
 `;
-const Strong = styled.strong`
+const DoneName = styled.strong`
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -28,18 +28,18 @@ const DoneIcon = styled.img.attrs(props => ({
   width: 1.5rem;
   height: 1.5rem;
 
-  ${DoneBlock}:hover & {
+  ${PreviewDoneBlock}:hover & {
     animation: ${vertical} 1s infinite;
   }
 `;
 
-function Done() {
+function PreviewDone() {
   return (
-    <DoneBlock>
-      <Strong>Done</Strong>
+    <PreviewDoneBlock>
+      <DoneName>Done</DoneName>
       <DoneIcon svg={doneSVG} />
-    </DoneBlock>
+    </PreviewDoneBlock>
   );
 }
 
-export default Done;
+export default PreviewDone;

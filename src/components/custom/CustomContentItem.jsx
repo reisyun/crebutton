@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ContentItemBlock = styled.div`
+const CustomContentItemBlock = styled.div`
   cursor: pointer;
   position: relative;
   display: flex;
@@ -43,13 +43,13 @@ const ContentIcon = styled.img.attrs(props => ({
   height: 100px;
 `;
 
-function ContentItem({ name, svg }) {
+function CustomContentItem({ name, svg }) {
   return (
-    <ContentItemBlock>
+    <CustomContentItemBlock>
       <ContentName>{name}</ContentName>
       <ContentIcon svg={svg} />
-    </ContentItemBlock>
+    </CustomContentItemBlock>
   );
 }
 
-export default ContentItem;
+export default CustomContentItem;

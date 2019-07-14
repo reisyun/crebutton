@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const SlideBarBlock = styled.div`
+const PreviewSlideBarBlock = styled.div`
   display: flex;
   position: absolute;
   top: 0;
@@ -25,7 +25,7 @@ const Bar = styled.span`
   `}
 `;
 
-function SlideBar({ slideBar }) {
+function PreviewSlideBar({ slideBar }) {
   const BAR_COUNT = 4;
 
   const _createBar = (count = 4) => {
@@ -37,7 +37,7 @@ function SlideBar({ slideBar }) {
     ));
   };
 
-  return <SlideBarBlock>{_createBar(BAR_COUNT)}</SlideBarBlock>;
+  return <PreviewSlideBarBlock>{_createBar(BAR_COUNT)}</PreviewSlideBarBlock>;
 }
 
-export default SlideBar;
+export default PreviewSlideBar;

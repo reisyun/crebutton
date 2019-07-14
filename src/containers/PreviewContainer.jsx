@@ -1,15 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as customActions from '../../modules/custom';
-import Button from '../../components/preview/Button';
+import * as customActions from '../modules/custom';
+import Preview from '../components/preview/Preview';
 
-function ButtonContainer({ text, slideBar, ActiveSlideBar }) {
+function PreviewContainer({ text, slideBar, ActiveSlideBar }) {
   const onSlideBarControl = () => {
     const slideBarState = slideBar ? false : true;
     ActiveSlideBar.activeSlideBar(slideBarState);
   };
-  return <Button text={text} onSlideBarControl={onSlideBarControl} />;
+  return (
+    <Preview
+      text={text}
+      slideBar={slideBar}
+      onSlideBarControl={onSlideBarControl}
+    />
+  );
 }
 
 const mapStateToProps = ({ custom }) => ({
@@ -23,4 +29,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ButtonContainer);
+)(PreviewContainer);

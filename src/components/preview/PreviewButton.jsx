@@ -31,7 +31,7 @@ const MyButton = styled.button.attrs(props => ({
 
 const { useState } = React;
 
-function Button({ text, onSlideBarControl }) {
+function PreviewButton({ text, onSlideBarControl }) {
   // Prevent duplicate clicks
   const [disabled, setDisabled] = useState(false);
 
@@ -45,10 +45,10 @@ function Button({ text, onSlideBarControl }) {
   return (
     <MyButton
       disabled={disabled}
-      onClick={() => duplicateClicks() || onSlideBarControl()}>
+      onClick={onSlideBarControl || duplicateClicks}>
       {text ? text : 'Click this'}
     </MyButton>
   );
 }
 
-export default Button;
+export default PreviewButton;

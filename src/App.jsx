@@ -1,33 +1,27 @@
 import React from 'react';
+import Main from './components/template/Main';
+import Viewer from './components/template/Viewer';
+import Panel from './components/template/Panel';
 
-import MainTemplate from './components/template/MainTemplate';
-import Preview from './components/preview/Preview';
-import Done from './components/preview/Done';
-import ButtonContainer from './containers/preview/ButtonContainer';
-import SlideBarContainer from './containers/preview/SlideBarContainer';
+import Result from './components/result/Result';
+import PreviewContainer from './containers/PreviewContainer';
 
-import Custom from './components/custom/Custom';
-import ContentList from './components/custom/ContentList';
-import HeaderContainer from './containers/custom/HeaderContainer';
+import Copy from './components/copy/Copy';
+import CustomContainer from './containers/CustomContainer';
 
 function App() {
   return (
-    <MainTemplate>
-      <MainTemplate.View>
-        <Preview>
-          <SlideBarContainer />
-          <ButtonContainer />
-          <Done />
-        </Preview>
-      </MainTemplate.View>
+    <Main>
+      <Viewer>
+        <PreviewContainer />
+        <Result />
+      </Viewer>
 
-      <MainTemplate.Panel>
-        <Custom>
-          <HeaderContainer />
-          <ContentList />
-        </Custom>
-      </MainTemplate.Panel>
-    </MainTemplate>
+      <Panel>
+        <CustomContainer />
+        <Copy />
+      </Panel>
+    </Main>
   );
 }
 

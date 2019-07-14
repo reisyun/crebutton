@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContentItem from './ContentItem';
 import color from '../../assets/images/color.svg';
 import shape from '../../assets/images/shape.svg';
 import effect from '../../assets/images/effect.svg';
 import transform from '../../assets/images/transform.svg';
+import CustomContentItem from './CustomContentItem';
 
-const ContentListBlock = styled.nav`
+const CustomContentBlock = styled.nav`
   position: relative;
   margin-top: 1.25rem;
   padding: 0 1.5rem;
 `;
 
-function ContentList() {
+function CustomContent() {
   const contents = [
     {
       name: 'color',
@@ -33,12 +33,12 @@ function ContentList() {
   ];
 
   return (
-    <ContentListBlock>
+    <CustomContentBlock>
       {contents.map(({ name, svg }) => (
-        <ContentItem key={`content-${name}`} name={name} svg={svg} />
+        <CustomContentItem key={`content-${name}`} name={name} svg={svg} />
       ))}
-    </ContentListBlock>
+    </CustomContentBlock>
   );
 }
 
-export default ContentList;
+export default CustomContent;

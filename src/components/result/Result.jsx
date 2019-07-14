@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SourceCode from './SourceCode';
+import ResultSourceCode from './ResultSourceCode';
 
 const ResultBlock = styled.div`
   position: relative;
@@ -11,7 +11,7 @@ const ResultBlock = styled.div`
 function Result() {
   return (
     <ResultBlock>
-      <SourceCode />
+      <ResultSourceCode />
     </ResultBlock>
   );
 }
