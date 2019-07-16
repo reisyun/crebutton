@@ -1,27 +1,19 @@
 import React from 'react';
-import Main from './components/template/Main';
-import Viewer from './components/template/Viewer';
-import Panel from './components/template/Panel';
-
-import Result from './components/result/Result';
-import PreviewContainer from './containers/PreviewContainer';
-
-import Copy from './components/copy/Copy';
-import CustomContainer from './containers/CustomContainer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Layout from './contents/Layout';
+import Main from './contents/Main';
+import Color from './contents/Color';
 
 function App() {
   return (
-    <Main>
-      <Viewer>
-        <PreviewContainer />
-        <Result />
-      </Viewer>
-
-      <Panel>
-        <CustomContainer />
-        <Copy />
-      </Panel>
-    </Main>
+    <Layout>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/color" component={Color} />
+        </Switch>
+      </Router>
+    </Layout>
   );
 }
 

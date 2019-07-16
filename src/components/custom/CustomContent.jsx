@@ -1,42 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
-import color from '../../assets/images/color.svg';
-import shape from '../../assets/images/shape.svg';
-import effect from '../../assets/images/effect.svg';
-import transform from '../../assets/images/transform.svg';
-import CustomContentItem from './CustomContentItem';
 
-const CustomContentBlock = styled.nav`
+const CustomContentBlock = styled.div`
+  cursor: pointer;
   position: relative;
-  margin-top: 1.25rem;
-  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-out;
+
+  &:first-child {
+    padding-top: 0;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    width: 0px;
+    height: 100px;
+    background-color: #489cea;
+    border-radius: 0 4px 4px 0;
+    transition: width 0.2s ease-out;
+  }
+  &:hover {
+    filter: grayscale(0%);
+
+    &::before {
+      width: 4px;
+    }
+  }
+`;
+const ContentName = styled.span`
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+`;
+const ContentIcon = styled.img.attrs(props => ({
+  src: props.svg,
+}))`
+  width: 100px;
+  height: 100px;
 `;
 
-function CustomContent() {
-  const contents = [
-    {
-      name: 'color',
-      svg: color,
-    },
-    {
-      name: 'shape',
-      svg: shape,
-    },
-    {
-      name: 'effect',
-      svg: effect,
-    },
-    {
-      name: 'transform',
-      svg: transform,
-    },
-  ];
-
+function CustomContent({ name, svg }) {
   return (
     <CustomContentBlock>
-      {contents.map(({ name, svg }) => (
-        <CustomContentItem key={`content-${name}`} name={name} svg={svg} />
-      ))}
+      <ContentName>{name}</ContentName>
+      <ContentIcon svg={svg} />
     </CustomContentBlock>
   );
 }

@@ -1,23 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as customActions from '../modules/custom';
-import Header from '../components/header/Header';
+import * as headerActions from '../../modules/header';
+import Header from '../../components/header/Header';
 
-function HeaderContainer({ text, CustomActions }) {
+function HeaderContainer({ text, HeaderActions }) {
   const onChangeText = e => {
     const { value } = e.target;
-    CustomActions.changeInput(value);
+    HeaderActions.changeInput(value);
   };
 
   return <Header text={text} onChangeText={onChangeText} />;
 }
 
-const mapStateToProps = ({ custom }) => ({
-  text: custom.text,
+const mapStateToProps = ({ header }) => ({
+  text: header.text,
 });
 const mapDispatchToProps = dispatch => ({
-  CustomActions: bindActionCreators(customActions, dispatch),
+  HeaderActions: bindActionCreators(headerActions, dispatch),
 });
 
 export default connect(

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import doneSVG from '../../assets/images/done.svg';
+import { arrow } from '../../assets/images';
 import { vertical } from '../../lib/keyframes.js';
 
 const PreviewDoneBlock = styled.div`
@@ -33,11 +33,11 @@ const DoneIcon = styled.img.attrs(props => ({
   }
 `;
 
-function PreviewDone() {
+function PreviewDone({ onConvertMode }) {
   return (
-    <PreviewDoneBlock>
+    <PreviewDoneBlock onClick={onConvertMode}>
       <DoneName>Done</DoneName>
-      <DoneIcon svg={doneSVG} />
+      <DoneIcon svg={arrow} />
     </PreviewDoneBlock>
   );
 }

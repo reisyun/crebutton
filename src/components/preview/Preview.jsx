@@ -13,12 +13,12 @@ const PreviewBlock = styled.div`
   height: inherit;
 `;
 
-function Preview({ text, slideBar, onSlideBarControl }) {
+function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
   return (
     <PreviewBlock>
       <PreviewSlideBar slideBar={slideBar} />
       <PreviewButton text={text} onSlideBarControl={onSlideBarControl} />
-      <PreviewDone />
+      <PreviewDone onConvertMode={onConvertMode} />
     </PreviewBlock>
   );
 }

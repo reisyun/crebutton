@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PanelTemplate = styled.div`
+const PanelTemplateBlock = styled.div`
   flex-grow: 3;
   position: relative;
   height: 100vh;
@@ -9,8 +9,8 @@ const PanelTemplate = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 `;
 
-function Panel({ children }) {
-  return <PanelTemplate>{children}</PanelTemplate>;
+function PanelTemplate({ children }) {
+  return <PanelTemplateBlock>{children}</PanelTemplateBlock>;
 }
 
-export default Panel;
+export default PanelTemplate;

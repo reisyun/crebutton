@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import custom from './custom';
+import preview from './preview';
+import header from './header';
 
 export default combineReducers({
-  custom,
+  preview,
+  header,
 });

@@ -18,6 +18,8 @@ const MyButton = styled.button.attrs(props => ({
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
+  word-wrap: break-word;
+  word-break: break-all;
 
   border-radius: 2.5rem;
   background-color: #489cea;
@@ -45,7 +47,7 @@ function PreviewButton({ text, onSlideBarControl }) {
   return (
     <MyButton
       disabled={disabled}
-      onClick={onSlideBarControl || duplicateClicks}>
+      onClick={() => onSlideBarControl() || duplicateClicks()}>
       {text ? text : 'Click this'}
     </MyButton>
   );
