@@ -23,15 +23,11 @@ function Main() {
     },
   ];
 
-  return (
-    <>
-      {contents.map(({ name, svg }) => (
-        <Link key={name} to={`/${name}`}>
-          <CustomContent key={`content-${name}`} name={name} svg={svg} />
-        </Link>
-      ))}
-    </>
-  );
+  return contents.map(({ name, svg }) => (
+    <Link key={name} to={`/${name}`}>
+      <CustomContent key={`content-${name}`} name={name} svg={svg} />
+    </Link>
+  ));
 }
 
 export default Main;

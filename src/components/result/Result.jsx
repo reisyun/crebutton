@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ResultConvert from './ResultConvert';
 import ResultSourceCode from './ResultSourceCode';
 
 const ResultBlock = styled.div`
@@ -10,10 +11,11 @@ const ResultBlock = styled.div`
   transition: margin-top 0.5s ease-in-out;
 `;
 
-function Result({ done }) {
+function Result({ done, onConvertMode }) {
   return (
     <ResultBlock done={done}>
       <ResultSourceCode />
+      <ResultConvert onConvertMode={onConvertMode} />
     </ResultBlock>
   );
 }

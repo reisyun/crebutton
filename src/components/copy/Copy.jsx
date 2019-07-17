@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CopyClipboard from './CopyClipboard';
+import CopyToClipboard from './CopyToClipboard';
 
 const CopyBlock = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const CopyBlock = styled.div`
 function Copy() {
   return (
     <CopyBlock>
-      <CopyClipboard />
+      <CopyToClipboard />
     </CopyBlock>
   );
 }

@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as previewActions from '../../modules/preview';
+import * as baseActions from '../../modules/base';
 import Preview from '../../components/preview/Preview';
 
-function PreviewContainer({ PreviewActions, text, done, slideBar }) {
+function PreviewContainer({ BaseActions, text, done, slideBar }) {
   const onConvertMode = () => {
-    PreviewActions.convertMode(done);
+    BaseActions.convertMode(done);
   };
 
   const onSlideBarControl = () => {
-    PreviewActions.toggleSlideBar(slideBar);
+    BaseActions.toggleSlideBar(slideBar);
   };
 
   return (
@@ -24,13 +24,13 @@ function PreviewContainer({ PreviewActions, text, done, slideBar }) {
   );
 }
 
-const mapStateToProps = ({ preview, header }) => ({
-  text: header.text,
-  done: preview.done,
-  slideBar: preview.slideBar,
+const mapStateToProps = ({ base }) => ({
+  text: base.text,
+  done: base.done,
+  slideBar: base.slideBar,
 });
 const mapDispatchToProps = dispatch => ({
-  PreviewActions: bindActionCreators(previewActions, dispatch),
+  BaseActions: bindActionCreators(baseActions, dispatch),
 });
 
 export default connect(

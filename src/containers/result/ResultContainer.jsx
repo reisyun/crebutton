@@ -1,13 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as baseActions from '../../modules/base';
 import Result from '../../components/result/Result';
 
-function ResultContainer({ done }) {
-  return <Result done={done} />;
+function ResultContainer({ BaseActions, done }) {
+  const onConvertMode = () => {
+    BaseActions.convertMode(done);
+  };
+
+  return <Result done={done} onConvertMode={onConvertMode} />;
 }
 
-const mapStateToProps = ({ preview }) => ({
-  done: preview.done,
+const mapStateToProps = ({ base }) => ({
+  done: base.done,
+});
+const mapDispatchToProps = dispatch => ({
+  BaseActions: bindActionCreators(baseActions, dispatch),
 });
 
-export default connect(mapStateToProps)(ResultContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ResultContainer);

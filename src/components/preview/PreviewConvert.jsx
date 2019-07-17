@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { arrow } from '../../assets/images';
 import { vertical } from '../../lib/keyframes.js';
 
-const PreviewDoneBlock = styled.div`
+const PreviewConvertBlock = styled.div`
   z-index: 200;
   cursor: pointer;
   position: absolute;
@@ -16,30 +16,30 @@ const PreviewDoneBlock = styled.div`
   padding: 0.5rem 0;
   background-color: #fbc531;
 `;
-const DoneName = styled.strong`
+const Name = styled.strong`
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
 `;
-const DoneIcon = styled.img.attrs(props => ({
+const Icon = styled.img.attrs(props => ({
   src: props.svg,
 }))`
   margin-left: 0.5rem;
   width: 1.5rem;
   height: 1.5rem;
 
-  ${PreviewDoneBlock}:hover & {
+  ${PreviewConvertBlock}:hover & {
     animation: ${vertical} 1s infinite;
   }
 `;
 
-function PreviewDone({ onConvertMode }) {
+function PreviewConvert({ onConvertMode }) {
   return (
-    <PreviewDoneBlock onClick={onConvertMode}>
-      <DoneName>Done</DoneName>
-      <DoneIcon svg={arrow} />
-    </PreviewDoneBlock>
+    <PreviewConvertBlock onClick={onConvertMode}>
+      <Name>Done</Name>
+      <Icon svg={arrow} />
+    </PreviewConvertBlock>
   );
 }
 
-export default PreviewDone;
+export default PreviewConvert;

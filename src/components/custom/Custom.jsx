@@ -6,7 +6,7 @@ const CustomBlock = styled.section`
   overflow-y: scroll;
   height: inherit;
 `;
-const CustomContents = styled.nav`
+const Contents = styled.nav`
   position: relative;
   margin-top: 1rem;
   padding: 0 1.5rem;
@@ -16,7 +16,7 @@ function Custom({ children }) {
   return (
     <CustomBlock>
       <HeaderContainer />
-      <CustomContents>{children}</CustomContents>
+      <Contents>{children}</Contents>
     </CustomBlock>
   );
 }

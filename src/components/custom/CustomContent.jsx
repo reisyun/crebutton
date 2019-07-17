@@ -18,7 +18,7 @@ const CustomContentBlock = styled.div`
     content: '';
     position: absolute;
     left: -1.5rem;
-    width: 0px;
+    width: 0rem;
     height: 100px;
     background-color: #489cea;
     border-radius: 0 4px 4px 0;
@@ -32,12 +32,12 @@ const CustomContentBlock = styled.div`
     }
   }
 `;
-const ContentName = styled.span`
+const Name = styled.span`
   font-size: 1.75rem;
   font-weight: 500;
   text-transform: uppercase;
 `;
-const ContentIcon = styled.img.attrs(props => ({
+const Icon = styled.img.attrs(props => ({
   src: props.svg,
 }))`
   width: 100px;
@@ -47,8 +47,8 @@ const ContentIcon = styled.img.attrs(props => ({
 function CustomContent({ name, svg }) {
   return (
     <CustomContentBlock>
-      <ContentName>{name}</ContentName>
-      <ContentIcon svg={svg} />
+      <Name>{name}</Name>
+      <Icon svg={svg} />
     </CustomContentBlock>
   );
 }

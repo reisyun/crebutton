@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PreviewSlideBar from './PreviewSlideBar';
 import PreviewButton from './PreviewButton';
-import PreviewDone from './PreviewDone';
+import PreviewConvert from './PreviewConvert';
 
 const PreviewBlock = styled.div`
   position: relative;
@@ -18,7 +18,7 @@ function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
     <PreviewBlock>
       <PreviewSlideBar slideBar={slideBar} />
       <PreviewButton text={text} onSlideBarControl={onSlideBarControl} />
-      <PreviewDone onConvertMode={onConvertMode} />
+      <PreviewConvert onConvertMode={onConvertMode} />
     </PreviewBlock>
   );
 }
