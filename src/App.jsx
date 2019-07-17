@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Layout } from './contents';
 import routes from './lib/routes';
@@ -22,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(module)(App);

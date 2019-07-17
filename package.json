@@ -66,6 +66,9 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
+  "devDependencies": {
+    "react-hot-loader": "^4.12.7"
+  },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -134,6 +137,9 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
     ]
   }
 }
