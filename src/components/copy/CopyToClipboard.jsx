@@ -20,14 +20,7 @@ const { useState } = React;
 
 function CopyToClipboard() {
   const [copied, setCopied] = useState(true);
-
-  const handleResult = () => {
-    setCopied(false);
-
-    setTimeout(() => {
-      setCopied(true);
-    }, 1000);
-  };
+  const handleResult = () => setCopied(false);
 
   return (
     <CopyToClipboardBlock onClick={handleResult}>

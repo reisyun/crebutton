@@ -16,7 +16,7 @@ const PreviewConvertBlock = styled.div`
   padding: 0.5rem 0;
   background-color: #fbc531;
 `;
-const Name = styled.strong`
+const Name = styled.em`
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;

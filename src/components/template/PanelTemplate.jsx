@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PanelTemplateBlock = styled.div`
+const PanelTemplateBlock = styled.article`
   flex-grow: 3;
   position: relative;
   height: 100vh;

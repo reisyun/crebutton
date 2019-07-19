@@ -18,7 +18,6 @@ const ResultConvertBlock = styled.div`
   border-radius: 50%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 `;
-
 const Icon = styled.img.attrs(props => ({
   src: props.svg,
 }))`

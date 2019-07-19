@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ViewerTemplateBlock = styled.div`
+const ViewerTemplateBlock = styled.article`
   flex-grow: 7;
   position: relative;
   height: 100vh;

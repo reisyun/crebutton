@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CustomContentBlock = styled.div`
+const CustomContentBlock = styled.span`
   cursor: pointer;
   position: relative;
   display: flex;
@@ -32,7 +32,7 @@ const CustomContentBlock = styled.div`
     }
   }
 `;
-const Name = styled.span`
+const Name = styled.strong`
   font-size: 1.75rem;
   font-weight: 500;
   text-transform: uppercase;

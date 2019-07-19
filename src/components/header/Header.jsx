@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderTitle from './HeaderTitle';
 import HeaderTextInput from './HeaderTextInput';
+import HeaderClose from './HeaderClose';
 
 const HeaderBlock = styled.header`
   z-index: 200;
@@ -18,6 +19,7 @@ function Header({ text, onChangeText }) {
     <HeaderBlock>
       <HeaderTitle />
       <HeaderTextInput text={text} onChangeText={onChangeText} />
+      <HeaderClose />
     </HeaderBlock>
   );
 }

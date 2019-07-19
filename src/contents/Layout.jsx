@@ -6,7 +6,7 @@ import PanelTemplate from '../components/template/PanelTemplate';
 import ResultContainer from '../containers/result/ResultContainer';
 import PreviewContainer from '../containers/preview/PreviewContainer';
 
-import Copy from '../components/copy/Copy';
+import CopyContainer from '../containers/copy/CopyContainer';
 import Custom from '../components/custom/Custom';
 
 function Layout({ children }) {
@@ -18,8 +18,8 @@ function Layout({ children }) {
       </ViewerTemplate>
 
       <PanelTemplate>
+        <CopyContainer />
         <Custom>{children}</Custom>
-        <Copy />
       </PanelTemplate>
     </BaseTemplate>
   );

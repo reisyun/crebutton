@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BaseTemplateBlock = styled.div`
+const BaseTemplateBlock = styled.main`
   display: flex;
   position: relative;
   overflow: hidden;
