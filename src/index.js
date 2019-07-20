@@ -5,14 +5,15 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { BrowserRouter } from 'react-router-dom';
 import rootReducer from './modules';
-import './assets/style/index.css';
-import App from './App.jsx';
+import GlobalStyle from './lib/styles/globalStyle';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <Provider store={store}>
+    <GlobalStyle />
     <BrowserRouter>
       <App />
     </BrowserRouter>
