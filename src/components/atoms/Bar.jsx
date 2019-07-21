@@ -8,7 +8,7 @@ const Bar = styled.div`
     transform: scaleY(${slideBar ? 1 : 0});
     transform-origin: top;
     transition: transform 0.3s ease-in-out;
-    transition-delay: ${count * 0.5}s;
+    transition-delay: ${count * 0.1}s;
   `}
 `;
 

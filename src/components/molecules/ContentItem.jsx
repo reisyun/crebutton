@@ -9,13 +9,9 @@ const ContentItemBlock = styled.span`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding-bottom: 1.5rem;
   filter: grayscale(100%);
   transition: filter 0.2s ease-out;
-
-  &:first-child {
-    padding-top: 0;
-  }
 
   &::before {
     content: '';
@@ -37,11 +33,11 @@ const ContentItemBlock = styled.span`
   }
 `;
 
-function ContentItem({ name, svg }) {
+function ContentItem({ name, icon }) {
   return (
     <ContentItemBlock>
       <Name fontSize="2">{name}</Name>
-      <Icon icon={svg} size="6.25" />
+      <Icon icon={icon} size="6.25rem" />
     </ContentItemBlock>
   );
 }

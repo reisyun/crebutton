@@ -16,7 +16,7 @@ const PreviewWrapper = styled.div`
 function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
   return (
     <PreviewWrapper>
-      <SlideBar slideBar={slideBar} />
+      <SlideBar slideBar={slideBar} count="4" />
       <MainButton text={text} onSlideBarControl={onSlideBarControl} />
       <PreviewConvert onConvertMode={onConvertMode} />
     </PreviewWrapper>

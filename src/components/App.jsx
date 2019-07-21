@@ -1,8 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from '../lib/routes';
-import { Layout } from '../pages';
+import { Layout } from '../contents';
 
 function App() {
   return (

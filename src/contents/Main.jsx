@@ -25,7 +25,7 @@ function Main() {
 
   return contents.map(({ name, svg }) => (
     <Link key={name} to={`/${name}`}>
-      <ContentItem key={`content-${name}`} name={name} svg={svg} />
+      <ContentItem key={`content-${name}`} name={name} icon={svg} />
     </Link>
   ));
 }

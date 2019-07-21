@@ -4,10 +4,10 @@ import Header from '../molecules/Header';
 
 const CustomWrapper = styled.section`
   overflow-y: scroll;
+  position: relative;
   height: inherit;
 `;
-const Contents = styled.nav`
-  position: relative;
+const Contents = styled.div`
   margin-top: 1rem;
   padding: 0 1.5rem;
 `;

@@ -13,7 +13,7 @@ const HeaderBlock = styled.div`
   background-color: #f1f2f6;
 `;
 
-function Header({ title, text, onChangeText }) {
+function Header({ match, title, text, onChangeText }) {
   return (
     <HeaderBlock>
       <Title>{title ? title : 'custom'}</Title>
