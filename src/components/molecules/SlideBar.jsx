@@ -11,18 +11,19 @@ const SlideBarBlock = styled.div`
   bottom: 0;
 `;
 
-function SlideBar({ slideBar, count = 4 }) {
+function SlideBar({ slideBar }) {
+  const SLIDEBAR_COUNT = 4;
+
   const _createBar = num => {
     let arr = [];
+    // 배열에 SLIDEBAR_COUNT의 개수만큼 인자를 추가해 map 순환
     for (let i = 1; i <= num; i = i + 1) arr.push(i);
-
-    // 임시 배열을 만들어 갯수대로 map 순환
     return arr.map(num => (
-      <Bar key={`slideBar-${num}`} count={num} slideBar={slideBar} />
+      <Bar count={num} slideBar={slideBar} key={`slideBar-${num}`} />
     ));
   };
 
-  return <SlideBarBlock>{_createBar(count)}</SlideBarBlock>;
+  return <SlideBarBlock>{_createBar(SLIDEBAR_COUNT)}</SlideBarBlock>;
 }
 
 export default SlideBar;

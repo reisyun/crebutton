@@ -1,4 +1,4 @@
-import { Main, Color, Shape, Effect, Transform } from '../../contents';
+import { Main, Color, Shape, Effect, Transform } from '../../pages';
 
 export default [
   {

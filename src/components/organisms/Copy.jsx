@@ -1,8 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import SourceCode from '../atoms/SourceCode';
 import CopyButton from '../molecules/CopyButton';
 
-const CopyWrapper = styled.div`
+const CopyWrapper = styled.section`
   z-index: 999;
   position: absolute;
   top: 0;
@@ -29,6 +30,7 @@ const CopyWrapper = styled.div`
 function Copy({ done }) {
   return (
     <CopyWrapper done={done}>
+      <SourceCode />
       <CopyButton />
     </CopyWrapper>
   );

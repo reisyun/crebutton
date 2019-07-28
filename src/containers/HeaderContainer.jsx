@@ -2,18 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as baseActions from '../modules/base';
-import Custom from '../components/organisms/Custom';
+import Header from '../components/organisms/Header';
 
-function CustomContainer({ children, text, BaseActions }) {
+function HeaderContainer({ BaseActions, children, close, title, text }) {
   const onChangeText = e => {
     const { value } = e.target;
     BaseActions.changeInput(value);
   };
 
   return (
-    <Custom text={text} onChangeText={onChangeText}>
+    <Header close={close} title={title} text={text} onChangeText={onChangeText}>
       {children}
-    </Custom>
+    </Header>
   );
 }
 
@@ -27,4 +27,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(CustomContainer);
+)(HeaderContainer);

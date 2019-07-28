@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { close } from '../../assets/svg';
 import Icon from '../atoms/Icon';
 
-const StyledIcon = styled(Icon)`
+const CloseBlock = styled.span`
   z-index: 200;
   position: absolute;
   top: 1.5rem;
@@ -12,9 +12,11 @@ const StyledIcon = styled(Icon)`
 `;
 
 const Close = () => (
-  <Link to="/" replace>
-    <StyledIcon icon={close} size="1.5rem" />
-  </Link>
+  <CloseBlock>
+    <Link to="/" replace>
+      <Icon icon={close} size="1.5rem" />
+    </Link>
+  </CloseBlock>
 );
 
 export default Close;

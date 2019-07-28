@@ -19,10 +19,9 @@ const CopyButtonBlock = styled(Button)`
 `;
 
 const { useState } = React;
-
 function CopyButton() {
   const [copied, setCopied] = useState(true);
-  const handleResult = () => setCopied(false);
+  const handleResult = () => setCopied(!copied);
 
   return (
     <CopyButtonBlock onClick={handleResult}>

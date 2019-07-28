@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
 
-const MainButtonBlock = styled(Button).attrs(props => ({
-  disabled: props.disabled,
-}))`
+const MainButtonBlock = styled(Button)`
   z-index: 200;
 
   display: flex;
@@ -30,23 +28,22 @@ const MainButtonBlock = styled(Button).attrs(props => ({
   }
 `;
 
-const { useState } = React;
-
+const { useState, useCallback } = React;
 function MainButton({ text, onSlideBarControl }) {
   const [disabled, setDisabled] = useState(false);
 
-  // 중복 클릭 방지
-  const _duplicateClicks = () => {
+  const handleClick = useCallback(() => {
+    onSlideBarControl();
+
+    // 중복 클릭 방지
     !disabled && setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
     }, 700);
-  };
+  }, [disabled, onSlideBarControl]);
 
   return (
-    <MainButtonBlock
-      disabled={disabled}
-      onClick={() => onSlideBarControl() || _duplicateClicks()}>
+    <MainButtonBlock disabled={disabled} onClick={handleClick}>
       {text ? text : 'Click this'}
     </MainButtonBlock>
   );

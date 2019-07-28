@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SourceCode from '../atoms/SourceCode';
 import ResultConvert from '../molecules/ResultConvert';
 
-const ResultWrapper = styled.div`
+const ResultWrapper = styled.section`
   position: relative;
   margin-top: ${props => (props.done ? '0vh' : '-100vh')};
   height: 100vh;

@@ -4,7 +4,7 @@ import SlideBar from '../molecules/SlideBar.jsx';
 import MainButton from '../molecules/MainButton.jsx';
 import PreviewConvert from '../molecules/PreviewConvert';
 
-const PreviewWrapper = styled.div`
+const PreviewWrapper = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ const PreviewWrapper = styled.div`
 function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
   return (
     <PreviewWrapper>
-      <SlideBar slideBar={slideBar} count="4" />
+      <SlideBar slideBar={slideBar} />
       <MainButton text={text} onSlideBarControl={onSlideBarControl} />
       <PreviewConvert onConvertMode={onConvertMode} />
     </PreviewWrapper>

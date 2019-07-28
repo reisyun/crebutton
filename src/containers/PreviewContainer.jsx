@@ -5,15 +5,9 @@ import * as baseActions from '../modules/base';
 import Preview from '../components/organisms/Preview';
 
 function PreviewContainer({ BaseActions, text, done, slideBar }) {
-  const onChangeText = e => {
-    const { value } = e.target;
-    BaseActions.changeInput(value);
-  };
-
   const onConvertMode = () => {
     BaseActions.convertMode(done);
   };
-
   const onSlideBarControl = () => {
     BaseActions.toggleSlideBar(slideBar);
   };
@@ -23,7 +17,6 @@ function PreviewContainer({ BaseActions, text, done, slideBar }) {
       text={text}
       done={done}
       slideBar={slideBar}
-      onChangeText={onChangeText}
       onConvertMode={onConvertMode}
       onSlideBarControl={onSlideBarControl}
     />

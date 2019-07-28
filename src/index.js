@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -7,7 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import rootReducer from './modules';
 import GlobalStyle from './lib/styles/globalStyle';
 import App from './components/App';
-import * as serviceWorker from './serviceWorker';
 
 const store = createStore(rootReducer, composeWithDevTools());
 

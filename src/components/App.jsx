@@ -2,7 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from '../lib/routes';
-import { Layout } from '../contents';
+import { Layout } from '../pages';
 
 function App() {
   return (
