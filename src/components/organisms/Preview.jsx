@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Store from '../../stores';
+import useStore from '../../lib/hooks/useStore';
 import SlideBar from '../molecules/SlideBar.jsx';
 import MainButton from '../molecules/MainButton.jsx';
 import PreviewConvert from '../molecules/PreviewConvert';
@@ -13,13 +15,19 @@ const PreviewWrapper = styled.section`
   height: inherit;
 `;
 
-function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
+function Preview() {
+  const { base } = useStore(Store);
+
   return (
-    <PreviewWrapper>
-      <SlideBar slideBar={slideBar} />
-      <MainButton text={text} onSlideBarControl={onSlideBarControl} />
-      <PreviewConvert onConvertMode={onConvertMode} />
-    </PreviewWrapper>
+    <Store.Consumer>
+      {() => (
+        <PreviewWrapper>
+          <SlideBar base={base} />
+          <MainButton base={base} />
+          <PreviewConvert base={base} />
+        </PreviewWrapper>
+      )}
+    </Store.Consumer>
   );
 }
 

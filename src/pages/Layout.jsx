@@ -1,22 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import BaseTemplate from '../components/templates/BaseTemplate';
-import ResultContainer from '../containers/ResultContainer';
-import PreviewContainer from '../containers/PreviewContainer';
-import CopyContainer from '../containers/CopyContainer';
+import Result from '../components/organisms/Result';
+import Preview from '../components/organisms/Preview';
+import Copy from '../components/organisms/Copy';
 
-const { Fragment } = React;
 function Layout({ children }) {
   return (
     <BaseTemplate
       viewer={
         <Fragment>
-          <ResultContainer />
-          <PreviewContainer />
+          <Result />
+          <Preview />
         </Fragment>
       }
       panel={
         <Fragment>
-          <CopyContainer />
+          <Copy />
           {children}
         </Fragment>
       }

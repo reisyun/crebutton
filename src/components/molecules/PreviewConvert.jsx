@@ -29,9 +29,9 @@ const StyledIcon = styled(Icon)`
   }
 `;
 
-function PreviewConvert({ onConvertMode }) {
+function PreviewConvert({ base }) {
   return (
-    <PreviewConvertBlcok onClick={onConvertMode}>
+    <PreviewConvertBlcok onClick={base.onConvertMode}>
       <Name fontSize="medium">Done</Name>
       <StyledIcon icon={arrow} size="1.5rem" />
     </PreviewConvertBlcok>

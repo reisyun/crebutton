@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import SourceCode from '../atoms/SourceCode';
+import Store from '../../stores';
+import useStore from '../../lib/hooks/useStore';
 import CopyButton from '../molecules/CopyButton';
 
 const CopyWrapper = styled.section`
@@ -27,12 +28,17 @@ const CopyWrapper = styled.section`
     `}
 `;
 
-function Copy({ done }) {
+function Copy() {
+  const { base } = useStore(Store);
+
   return (
-    <CopyWrapper done={done}>
-      <SourceCode />
-      <CopyButton />
-    </CopyWrapper>
+    <Store.Consumer>
+      {() => (
+        <CopyWrapper base={base}>
+          <CopyButton />
+        </CopyWrapper>
+      )}
+    </Store.Consumer>
   );
 }
 

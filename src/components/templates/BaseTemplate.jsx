@@ -8,12 +8,12 @@ const Base = styled.main`
   height: 100vh;
 `;
 const Viewer = styled.article`
-  flex-grow: 6;
+  flex-grow: 7;
   position: relative;
   height: 100vh;
 `;
 const Panel = styled.article`
-  flex-grow: 4;
+  flex-grow: 3;
   position: relative;
   height: 100vh;
   background-color: #f1f2f6;

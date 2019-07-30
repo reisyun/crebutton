@@ -2,11 +2,11 @@ import React from 'react';
 import { color, shape, effect, transform } from '../../assets/svg';
 import ContentItem from '../../components/molecules/ContentItem';
 import CustomTemplate from '../../components/templates/CustomTemplate';
-import HeaderContainer from '../../containers/HeaderContainer';
+import Header from '../../components/organisms/Header';
 
 function Main() {
   return (
-    <CustomTemplate header={<HeaderContainer title="custom" />}>
+    <CustomTemplate header={<Header title="custom" />}>
       {contents.map(({ name, icon }) => (
         <ContentItem name={name} icon={icon} key={`content-${name}`} />
       ))}

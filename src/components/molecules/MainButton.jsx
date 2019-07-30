@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
 
@@ -28,23 +28,22 @@ const MainButtonBlock = styled(Button)`
   }
 `;
 
-const { useState, useCallback } = React;
-function MainButton({ text, onSlideBarControl }) {
+function MainButton({ base }) {
   const [disabled, setDisabled] = useState(false);
 
   const handleClick = useCallback(() => {
-    onSlideBarControl();
+    base.onSlideBarControl();
 
     // 중복 클릭 방지
     !disabled && setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
     }, 700);
-  }, [disabled, onSlideBarControl]);
+  }, [base, disabled]);
 
   return (
     <MainButtonBlock disabled={disabled} onClick={handleClick}>
-      {text ? text : 'Click this'}
+      {base.text ? base.text : 'Click this'}
     </MainButtonBlock>
   );
 }

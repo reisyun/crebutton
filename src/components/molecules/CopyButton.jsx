@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
 
@@ -18,7 +18,6 @@ const CopyButtonBlock = styled(Button)`
   }
 `;
 
-const { useState } = React;
 function CopyButton() {
   const [copied, setCopied] = useState(true);
   const handleResult = () => setCopied(!copied);

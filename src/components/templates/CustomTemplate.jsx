@@ -5,11 +5,15 @@ const Custom = styled.section`
   overflow-y: auto;
   position: relative;
   height: inherit;
+`;
+const Content = styled.div`
+  margin-top: 1.5rem;
+  padding: 0 1.5rem;
 
   ${({ icon }) =>
     icon &&
     css`
-      &::after {
+      &::before {
         content: '';
         opacity: 0.25;
         position: absolute;
@@ -21,16 +25,12 @@ const Custom = styled.section`
       }
     `}
 `;
-const Content = styled.div`
-  margin-top: 1.5rem;
-  padding: 0 1.5rem;
-`;
 
 function CustomTemplate({ children, header, icon }) {
   return (
-    <Custom icon={icon}>
+    <Custom>
       {header}
-      <Content>{children}</Content>
+      <Content icon={icon}>{children}</Content>
     </Custom>
   );
 }
