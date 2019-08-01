@@ -23,7 +23,7 @@ function Header({ title }) {
         <HeaderWrapper>
           {title !== 'custom' && <Close />}
           <Title>{title}</Title>
-          <TextInput base={base} />
+          <TextInput text={base.text} onChangeText={base.onChangeText} />
         </HeaderWrapper>
       )}
     </Store.Consumer>

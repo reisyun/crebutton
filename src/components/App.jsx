@@ -6,20 +6,22 @@ import { Layout } from '../pages';
 
 function App() {
   return (
-    <Layout>
-      <Router>
-        <Switch>
-          {routes.map(({ path, content, exact }) => (
-            <Route
-              exact={exact}
-              path={path}
-              component={content}
-              key={`content-${path}`}
-            />
-          ))}
-        </Switch>
-      </Router>
-    </Layout>
+    <Layout
+      custom={
+        <Router>
+          <Switch>
+            {routes.map(({ path, content, exact }) => (
+              <Route
+                exact={exact}
+                path={path}
+                component={content}
+                key={`content-${path}`}
+              />
+            ))}
+          </Switch>
+        </Router>
+      }
+    />
   );
 }
 

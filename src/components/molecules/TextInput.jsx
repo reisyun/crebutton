@@ -14,13 +14,13 @@ const TextInputBlock = styled(Input)`
   }
 `;
 
-function TextInput({ base }) {
+function TextInput({ text, onChangeText }) {
   return (
     <TextInputBlock
       type="text"
-      value={base.text}
+      value={text}
       placeholder="버튼에 들어갈 값을 입력해주세요"
-      onChange={base.onChangeText}
+      onChange={onChangeText}
     />
   );
 }

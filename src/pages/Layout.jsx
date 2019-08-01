@@ -4,7 +4,7 @@ import Result from '../components/organisms/Result';
 import Preview from '../components/organisms/Preview';
 import Copy from '../components/organisms/Copy';
 
-function Layout({ children }) {
+function Layout({ custom }) {
   return (
     <BaseTemplate
       viewer={
@@ -16,7 +16,7 @@ function Layout({ children }) {
       panel={
         <Fragment>
           <Copy />
-          {children}
+          {custom}
         </Fragment>
       }
     />

@@ -22,9 +22,12 @@ function Preview() {
     <Store.Consumer>
       {() => (
         <PreviewWrapper>
-          <SlideBar base={base} />
-          <MainButton base={base} />
-          <PreviewConvert base={base} />
+          <SlideBar slideBar={base.slideBar} />
+          <MainButton
+            text={base.text}
+            onSlideBarControl={base.onSlideBarControl}
+          />
+          <PreviewConvert onConvertMode={base.onConvertMode} />
         </PreviewWrapper>
       )}
     </Store.Consumer>

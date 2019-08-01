@@ -21,7 +21,7 @@ function Result() {
       {() => (
         <ResultWrapper done={base.done}>
           <SourceCode />
-          <ResultConvert base={base} />
+          <ResultConvert onConvertMode={base.onConvertMode} />
         </ResultWrapper>
       )}
     </Store.Consumer>

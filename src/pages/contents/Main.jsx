@@ -5,11 +5,13 @@ import CustomTemplate from '../../components/templates/CustomTemplate';
 import Header from '../../components/organisms/Header';
 
 function Main() {
+  const contentList = contents.map(({ name, icon }) => (
+    <ContentItem name={name} icon={icon} key={`content-${name}`} />
+  ));
+
   return (
     <CustomTemplate header={<Header title="custom" />}>
-      {contents.map(({ name, icon }) => (
-        <ContentItem name={name} icon={icon} key={`content-${name}`} />
-      ))}
+      {contentList}
     </CustomTemplate>
   );
 }

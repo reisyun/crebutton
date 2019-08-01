@@ -28,22 +28,22 @@ const MainButtonBlock = styled(Button)`
   }
 `;
 
-function MainButton({ base }) {
+function MainButton({ text, onSlideBarControl }) {
   const [disabled, setDisabled] = useState(false);
 
   const handleClick = useCallback(() => {
-    base.onSlideBarControl();
+    onSlideBarControl();
 
     // 중복 클릭 방지
     !disabled && setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
     }, 700);
-  }, [base, disabled]);
+  }, [disabled, onSlideBarControl]);
 
   return (
     <MainButtonBlock disabled={disabled} onClick={handleClick}>
-      {base.text ? base.text : 'Click this'}
+      {text ? text : 'Click this'}
     </MainButtonBlock>
   );
 }

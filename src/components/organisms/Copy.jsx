@@ -34,7 +34,7 @@ function Copy() {
   return (
     <Store.Consumer>
       {() => (
-        <CopyWrapper base={base}>
+        <CopyWrapper dobe={base.done}>
           <CopyButton />
         </CopyWrapper>
       )}

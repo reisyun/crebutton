@@ -23,9 +23,9 @@ const StyledIcon = styled(Icon)`
   }
 `;
 
-function ResultConvert({ base }) {
+function ResultConvert({ onConvertMode }) {
   return (
-    <ResultConvertBlock onClick={base.onConvertMode}>
+    <ResultConvertBlock onClick={onConvertMode}>
       <StyledIcon icon={back} size="3rem" />
     </ResultConvertBlock>
   );

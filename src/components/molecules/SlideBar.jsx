@@ -11,11 +11,11 @@ const SlideBarBlock = styled.div`
   bottom: 0;
 `;
 
-function SlideBar({ base }) {
+function SlideBar({ slideBar }) {
   const BAR_COUNT = 4;
 
   const bars = _makeArray(BAR_COUNT).map(num => (
-    <Bar count={num} slideBar={base.slideBar} key={`slideBar-${num}`} />
+    <Bar slideBar={slideBar} count={num} key={`slideBar-${num}`} />
   ));
 
   return <SlideBarBlock>{bars}</SlideBarBlock>;
