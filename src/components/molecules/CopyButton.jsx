@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import useDisabled from '../../lib/hooks/useDisabled';
 import Button from '../atoms/Button';
 
 const CopyButtonBlock = styled(Button)`
@@ -19,12 +20,11 @@ const CopyButtonBlock = styled(Button)`
 `;
 
 function CopyButton() {
-  const [copied, setCopied] = useState(true);
-  const handleResult = () => setCopied(!copied);
+  const { disabled, onDisabled } = useDisabled(2000);
 
   return (
-    <CopyButtonBlock onClick={handleResult}>
-      {copied ? 'copy' : 'copied'}
+    <CopyButtonBlock disabled={disabled} onClick={onDisabled}>
+      {disabled ? 'copied' : 'copy'}
     </CopyButtonBlock>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import media from '../../lib/utils/media';
 import { arrow } from '../../assets/svg';
 import Convert from '../atoms/Convert';
 import Name from '../atoms/Name';
@@ -26,6 +27,10 @@ const StyledIcon = styled(Icon)`
 
   ${PreviewConvertBlcok}:hover & {
     animation: ${vertical} 1s infinite;
+
+    ${media.medium`
+      animation: none;
+    `}
   }
 `;
 

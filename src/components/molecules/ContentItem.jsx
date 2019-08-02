@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import media from '../../lib/utils/media';
 import Name from '../atoms/Name';
 import Icon from '../atoms/Icon';
 
@@ -11,7 +12,7 @@ const ContentItemBlock = styled.span`
     content: '';
     position: absolute;
     left: -1.5rem;
-    width: 0rem;
+    width: 0;
     height: 100px;
     background-color: #489cea;
     border-radius: 0 4px 4px 0;
@@ -19,8 +20,14 @@ const ContentItemBlock = styled.span`
   }
 
   &:hover::before {
-    width: 4px;
+    width: 0.25rem;
   }
+
+  ${media.medium`
+    &::before {
+      content: none;
+    }
+  `}
 `;
 const StyledName = styled(Name)`
   display: flex;
@@ -33,6 +40,14 @@ const StyledName = styled(Name)`
   &:hover {
     filter: grayscale(0%);
   }
+
+  ${media.medium`
+    filter: none;
+
+    &:hover {
+      filter: none;
+    }
+  `}
 `;
 
 function ContentItem({ name, icon }) {

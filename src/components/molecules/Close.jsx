@@ -11,12 +11,14 @@ const CloseBlock = styled.span`
   right: 1.5rem;
 `;
 
-const Close = () => (
-  <CloseBlock>
-    <Link to="/" replace>
-      <Icon icon={close} size="1.5rem" />
-    </Link>
-  </CloseBlock>
-);
+function Close() {
+  return (
+    <CloseBlock>
+      <Link to="/" replace>
+        <Icon icon={close} size="1.5rem" />
+      </Link>
+    </CloseBlock>
+  );
+}
 
 export default Close;

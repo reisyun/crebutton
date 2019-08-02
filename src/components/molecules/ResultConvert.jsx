@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import media from '../../lib/utils/media';
 import { back } from '../../assets/svg';
 import Convert from '../atoms/Convert';
 import Icon from '../atoms/Icon';
@@ -20,6 +21,10 @@ const ResultConvertBlock = styled(Convert)`
 const StyledIcon = styled(Icon)`
   ${ResultConvertBlock}:hover & {
     animation: ${rotate} 0.5s;
+
+    ${media.medium`
+      animation: none;
+    `}
   }
 `;
 

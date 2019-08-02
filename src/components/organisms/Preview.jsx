@@ -12,7 +12,7 @@ const PreviewWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: inherit;
+  height: 100vh;
 `;
 
 function Preview() {

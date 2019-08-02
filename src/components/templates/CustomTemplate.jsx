@@ -3,15 +3,14 @@ import styled, { css } from 'styled-components';
 
 const Custom = styled.section`
   overflow-y: auto;
-  position: relative;
   height: inherit;
 `;
 const Content = styled.div`
   margin-top: 1.5rem;
   padding: 0 1.5rem;
 
-  ${({ icon }) =>
-    icon &&
+  ${props =>
+    props.icon &&
     css`
       &::before {
         content: '';
@@ -21,7 +20,7 @@ const Content = styled.div`
         bottom: 1.5rem;
         width: 15rem;
         height: 15rem;
-        background-image: url('${icon}');
+        background-image: url('${props.icon}');
       }
     `}
 `;
