@@ -12,6 +12,8 @@ const MainButtonBlock = styled(Button)`
 
   width: 17.5rem;
   height: 5rem;
+  border-radius: 2.5rem;
+  background-color: #489cea;
 
   color: #fff;
   font-size: 2rem;
@@ -19,8 +21,6 @@ const MainButtonBlock = styled(Button)`
   word-wrap: break-word;
   word-break: break-all;
 
-  border-radius: 2.5rem;
-  background-color: #489cea;
   transform: scale(1);
   transition: transform 0.2s;
 

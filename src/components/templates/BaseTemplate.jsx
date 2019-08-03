@@ -10,7 +10,7 @@ const Base = styled.main`
 
   ${media.medium`
     flex-direction: column;
-    height: 200vh;
+    height: auto;
   `}
 `;
 const Viewer = styled.article`

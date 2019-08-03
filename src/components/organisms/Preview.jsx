@@ -25,6 +25,7 @@ function Preview() {
           <SlideBar slideBar={base.slideBar} />
           <MainButton
             text={base.text}
+            color={base.color}
             onSlideBarControl={base.onSlideBarControl}
           />
           <PreviewConvert onConvertMode={base.onConvertMode} />

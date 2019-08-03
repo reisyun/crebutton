@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: border-box;
     user-select: none;
+    color: #212121;
 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

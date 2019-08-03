@@ -16,7 +16,7 @@ function SourceCode() {
 }
 
 const data = `button {
-  
+    
 }`;
 
 export default SourceCode;

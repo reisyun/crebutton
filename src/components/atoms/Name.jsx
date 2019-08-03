@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const size = {
   small: 1,
@@ -7,9 +7,14 @@ const size = {
 };
 
 const Name = styled.strong`
-  font-size: ${props => size[props.fontSize]}rem;
   font-weight: 600;
   text-transform: uppercase;
+
+  ${props =>
+    props.fontSize &&
+    css`
+      font-size: ${size[props.fontSize]}rem;
+    `}
 `;
 
 export default Name;

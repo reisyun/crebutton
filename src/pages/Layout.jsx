@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import BaseTemplate from '../components/templates/BaseTemplate';
 import Result from '../components/organisms/Result';
 import Preview from '../components/organisms/Preview';
@@ -8,16 +8,16 @@ function Layout({ custom }) {
   return (
     <BaseTemplate
       viewer={
-        <Fragment>
+        <React.Fragment>
           <Result />
           <Preview />
-        </Fragment>
+        </React.Fragment>
       }
       panel={
-        <Fragment>
+        <React.Fragment>
           <Copy />
           {custom}
-        </Fragment>
+        </React.Fragment>
       }
     />
   );
