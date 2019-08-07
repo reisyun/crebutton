@@ -15,7 +15,6 @@ function PreviewContainer({ BaseActions, text, done, slideBar }) {
   return (
     <Preview
       text={text}
-      done={done}
       slideBar={slideBar}
       onConvertMode={onConvertMode}
       onSlideBarControl={onSlideBarControl}

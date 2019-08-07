@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseTemplate from '../components/templates/BaseTemplate';
+import PageTransition from '../containers/PageTransition';
 import ResultContainer from '../containers/ResultContainer';
 import PreviewContainer from '../containers/PreviewContainer';
 import CopyContainer from '../containers/CopyContainer';
@@ -16,7 +17,7 @@ function Layout({ custom }) {
       panel={
         <React.Fragment>
           <CopyContainer />
-          {custom}
+          <PageTransition>{custom}</PageTransition>
         </React.Fragment>
       }
     />

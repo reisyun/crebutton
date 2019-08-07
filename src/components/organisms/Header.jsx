@@ -12,10 +12,10 @@ const HeaderWrapper = styled.header`
   background-color: #f1f2f6;
 `;
 
-function Header({ title, text, onChangeText }) {
+function Header({ text, title, onChangeText, onPageTransition }) {
   return (
     <HeaderWrapper>
-      {title !== 'custom' && <Close />}
+      {title !== 'custom' && <Close onPageTransition={onPageTransition} />}
       <Title>{title}</Title>
       <TextInput text={text} onChangeText={onChangeText} />
     </HeaderWrapper>

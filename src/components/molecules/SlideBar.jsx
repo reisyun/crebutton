@@ -24,8 +24,9 @@ function SlideBar({ slideBar }) {
 // BAR_COUNT 개수만큼 배열에 인자를 추가
 const _makeArray = count => {
   const arr = [];
-  for (let i = 1; i <= count; i = i + 1) arr.push(i);
-
+  for (let i = 1; i <= count; i = i + 1) {
+    arr.push(i);
+  }
   return arr;
 };
 

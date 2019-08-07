@@ -20,7 +20,7 @@ const initialState = {
   text: '',
   done: false,
   slideBar: false,
-  transition: false,
+  transition: true,
 };
 
 export default handleActions(

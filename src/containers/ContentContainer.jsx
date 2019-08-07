@@ -2,29 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as baseActions from '../modules/base';
-import Header from '../components/organisms/Header';
+import Content from '../components/organisms/Content';
 
-function HeaderContainer({ BaseActions, text, title, transition }) {
-  const onChangeText = e => {
-    const { value } = e.target;
-    BaseActions.changeInput(value);
-  };
+function ContentContainer({ BaseActions, transition }) {
   const onPageTransition = () => {
     BaseActions.pageTransition(transition);
   };
 
-  return (
-    <Header
-      text={text}
-      title={title}
-      onChangeText={onChangeText}
-      onPageTransition={onPageTransition}
-    />
-  );
+  return <Content onPageTransition={onPageTransition} />;
 }
 
 const mapStateToProps = ({ base }) => ({
-  text: base.text,
+  transition: base.transition,
 });
 const mapDispatchToProps = dispatch => ({
   BaseActions: bindActionCreators(baseActions, dispatch),
@@ -33,4 +22,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(HeaderContainer);
+)(ContentContainer);

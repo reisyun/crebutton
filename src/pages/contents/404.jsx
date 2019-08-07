@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Name from '../components/atoms/Name';
-import Close from '../components/molecules/Close';
+import Name from '../../components/atoms/Name';
+import Close from '../../components/molecules/Close';
 
 const StyledName = styled(Name)`
   position: absolute;

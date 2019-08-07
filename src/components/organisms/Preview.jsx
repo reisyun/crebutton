@@ -13,15 +13,11 @@ const PreviewWrapper = styled.section`
   height: 100vh;
 `;
 
-function Preview({ text, slideBar, color, onConvertMode, onSlideBarControl }) {
+function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
   return (
     <PreviewWrapper>
       <SlideBar slideBar={slideBar} />
-      <MainButton
-        text={text}
-        color={color}
-        onSlideBarControl={onSlideBarControl}
-      />
+      <MainButton text={text} onSlideBarControl={onSlideBarControl} />
       <PreviewConvert onConvertMode={onConvertMode} />
     </PreviewWrapper>
   );

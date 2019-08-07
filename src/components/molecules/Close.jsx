@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { close } from '../../static/svg';
 import Icon from '../atoms/Icon';
 
@@ -11,9 +11,9 @@ const CloseBlock = styled.span`
   right: 1.5rem;
 `;
 
-function Close() {
+function Close({ onPageTransition }) {
   return (
-    <CloseBlock>
+    <CloseBlock onClick={onPageTransition}>
       <Link to="/" replace>
         <Icon icon={close} size="1.5rem" />
       </Link>
