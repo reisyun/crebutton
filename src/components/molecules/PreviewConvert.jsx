@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import media from '../../lib/utils/media';
-import { arrow } from '../../assets/svg';
+import { arrow } from '../../static/svg';
 import Convert from '../atoms/Convert';
 import Name from '../atoms/Name';
 import Icon from '../atoms/Icon';

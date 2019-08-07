@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import media from '../../lib/utils/media';
 import Name from '../atoms/Name';
 import Icon from '../atoms/Icon';
@@ -13,9 +13,9 @@ const ContentItemBlock = styled.span`
     position: absolute;
     left: -1.5rem;
     width: 0;
-    height: 100px;
+    height: 6.25rem;
     background-color: #489cea;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0.25rem 0.25rem 0;
     transition: width 0.2s ease-out;
   }
 

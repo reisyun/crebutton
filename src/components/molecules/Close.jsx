@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { close } from '../../assets/svg';
+import { close } from '../../static/svg';
 import Icon from '../atoms/Icon';
 
 const CloseBlock = styled.span`

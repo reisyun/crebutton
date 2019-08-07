@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { BrowserRouter } from 'react-router-dom';
+import rootReducer from './modules';
 import GlobalStyle from './lib/styles/globalStyle';
-import Store from './stores';
 import App from './components/App';
 
+const store = createStore(rootReducer, composeWithDevTools());
+
 ReactDOM.render(
-  <Store.Provider>
+  <Provider store={store}>
     <GlobalStyle />
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Store.Provider>,
+  </Provider>,
   document.getElementById('root'),
 );
 

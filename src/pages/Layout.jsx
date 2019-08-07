@@ -1,21 +1,21 @@
 import React from 'react';
 import BaseTemplate from '../components/templates/BaseTemplate';
-import Result from '../components/organisms/Result';
-import Preview from '../components/organisms/Preview';
-import Copy from '../components/organisms/Copy';
+import ResultContainer from '../containers/ResultContainer';
+import PreviewContainer from '../containers/PreviewContainer';
+import CopyContainer from '../containers/CopyContainer';
 
 function Layout({ custom }) {
   return (
     <BaseTemplate
       viewer={
         <React.Fragment>
-          <Result />
-          <Preview />
+          <ResultContainer />
+          <PreviewContainer />
         </React.Fragment>
       }
       panel={
         <React.Fragment>
-          <Copy />
+          <CopyContainer />
           {custom}
         </React.Fragment>
       }

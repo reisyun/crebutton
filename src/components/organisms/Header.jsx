@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Store from '../../stores';
-import useStore from '../../lib/hooks/useStore';
 import Title from '../atoms/Title';
 import Close from '../molecules/Close';
 import TextInput from '../molecules/TextInput';
@@ -14,19 +12,13 @@ const HeaderWrapper = styled.header`
   background-color: #f1f2f6;
 `;
 
-function Header({ title }) {
-  const { base } = useStore(Store);
-
+function Header({ title, text, onChangeText }) {
   return (
-    <Store.Consumer>
-      {() => (
-        <HeaderWrapper>
-          {title !== 'custom' && <Close />}
-          <Title>{title}</Title>
-          <TextInput text={base.text} onChangeText={base.onChangeText} />
-        </HeaderWrapper>
-      )}
-    </Store.Consumer>
+    <HeaderWrapper>
+      {title !== 'custom' && <Close />}
+      <Title>{title}</Title>
+      <TextInput text={text} onChangeText={onChangeText} />
+    </HeaderWrapper>
   );
 }
 

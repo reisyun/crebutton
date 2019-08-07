@@ -1,11 +1,11 @@
 import React from 'react';
-import { effect } from '../../assets/svg';
+import { effect } from '../../static/svg';
 import CustomTemplate from '../../components/templates/CustomTemplate';
-import Header from '../../components/organisms/Header';
+import HeaderContainer from '../../containers/HeaderContainer';
 
 function Effect() {
   return (
-    <CustomTemplate icon={effect} header={<Header title="Effect" />}>
+    <CustomTemplate icon={effect} header={<HeaderContainer title="Effect" />}>
       Effect Content
     </CustomTemplate>
   );

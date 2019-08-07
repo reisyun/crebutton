@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Store from '../../stores';
-import useStore from '../../lib/hooks/useStore';
 import SourceCode from '../molecules/SourceCode';
 import ResultConvert from '../molecules/ResultConvert';
 
@@ -14,18 +12,12 @@ const ResultWrapper = styled.section`
   transition: margin-top 0.5s ease-in-out;
 `;
 
-function Result() {
-  const { base } = useStore(Store);
-
+function Result({ done, onConvertMode }) {
   return (
-    <Store.Consumer>
-      {() => (
-        <ResultWrapper done={base.done}>
-          <SourceCode />
-          <ResultConvert onConvertMode={base.onConvertMode} />
-        </ResultWrapper>
-      )}
-    </Store.Consumer>
+    <ResultWrapper done={done}>
+      <SourceCode />
+      <ResultConvert onConvertMode={onConvertMode} />
+    </ResultWrapper>
   );
 }
 
