@@ -6,7 +6,7 @@ export const pageTransition = css`
   .custom-enter,
   .custom-exit {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
   .custom-enter-active,
   .custom-exit-active {

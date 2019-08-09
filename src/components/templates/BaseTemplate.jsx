@@ -40,28 +40,4 @@ function BaseTemplate({ viewer, panel }) {
   );
 }
 
-// const Resize = styled.span`
-//   z-index: 999;
-//   display: inline-block;
-//   position: absolute;
-//   width: 0.5rem;
-//   height: 100vh;
-
-//   &:hover {
-//     cursor: w-resize;
-//   }
-// `;
-
-// const panelRef = useRef();
-
-// const handleResize = () => {
-//   // Panel 비율 = Panel 폭 / Window 폭
-//   const windowWidth = window.innerWidth;
-//   const panelWidth = panelRef.current.clientWidth;
-//   const panelRatio = (panelWidth / windowWidth) * 100;
-
-//   console.log(panelRatio);
-//   return panelRatio;
-// };
-
 export default BaseTemplate;

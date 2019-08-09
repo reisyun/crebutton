@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function useDisabled(delay) {
+export default function useDisabled(duration) {
   const [disabled, setDisabled] = React.useState(false);
 
   // 시간이 지나면 상태를 false 처리
-  const _delay = (time, setState) => {
+  const delay = (time, setState) => {
     setTimeout(() => {
       setState(false);
     }, time);
@@ -13,8 +13,8 @@ export default function useDisabled(delay) {
   // 중복 클릭 방지
   const onDisabled = React.useCallback(() => {
     disabled === false && setDisabled(true);
-    _delay(delay, setDisabled);
-  }, [delay, disabled]);
+    delay(duration, setDisabled);
+  }, [disabled, duration]);
 
-  return { disabled, onDisabled };
+  return [disabled, onDisabled];
 }

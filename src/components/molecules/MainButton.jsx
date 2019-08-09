@@ -30,11 +30,11 @@ const MainButtonBlock = styled(Button)`
 `;
 
 function MainButton({ text, onSlideBarControl }) {
-  const { disabled, onDisabled } = useDisabled(700);
+  const [disabled, onDisabled] = useDisabled(700);
 
   const handleClick = useCallback(() => {
-    onSlideBarControl();
     onDisabled();
+    onSlideBarControl();
   }, [onDisabled, onSlideBarControl]);
 
   return (

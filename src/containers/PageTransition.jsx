@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 
 const PageTransition = ({ children, transition }) => {
   return (
-    <CSSTransition in={transition} timeout={1000} classNames="custom">
+    <CSSTransition in={transition} timeout={400} classNames="custom">
       {children}
     </CSSTransition>
   );
