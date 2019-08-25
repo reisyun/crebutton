@@ -16,7 +16,7 @@ const vertical = keyframes`
   }
 `;
 const PreviewConvertBlcok = styled(Convert)`
-  z-index: 999;
+  z-index: 250;
   position: absolute;
   left: 0;
   right: 0;
