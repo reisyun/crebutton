@@ -1,16 +1,20 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as baseActions from '../modules/base';
+import React, { useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { convertMode, slideBarControl } from '../modules/base';
 import Preview from '../components/organisms/Preview';
 
-function PreviewContainer({ BaseActions, text, done, slideBar }) {
-  const onConvertMode = () => {
-    BaseActions.convertMode(done);
-  };
-  const onSlideBarControl = () => {
-    BaseActions.slideBarControl(slideBar);
-  };
+function PreviewContainer() {
+  const { text, slideBar } = useSelector(state => state.base);
+  const dispatch = useDispatch();
+
+  const onConvertMode = useCallback(
+    () => dispatch(convertMode()),
+    [dispatch]
+  );
+  const onSlideBarControl = useCallback(
+    () => dispatch(slideBarControl()),
+    [dispatch]
+  );
 
   return (
     <Preview
@@ -22,16 +26,4 @@ function PreviewContainer({ BaseActions, text, done, slideBar }) {
   );
 }
 
-const mapStateToProps = ({ base }) => ({
-  text: base.text,
-  done: base.done,
-  slideBar: base.slideBar,
-});
-const mapDispatchToProps = dispatch => ({
-  BaseActions: bindActionCreators(baseActions, dispatch),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(PreviewContainer);
+export default PreviewContainer;

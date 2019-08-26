@@ -1,25 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as baseActions from '../modules/base';
+import React, { useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+import { pageTransition } from '../modules/base';
 import Content from '../components/organisms/Content';
 
-function ContentContainer({ BaseActions, transition }) {
-  const onPageTransition = () => {
-    BaseActions.pageTransition(transition);
-  };
+function ContentContainer() {
+  const dispatch = useDispatch();
+
+  const onPageTransition = useCallback(
+    () => dispatch(pageTransition()),
+    [dispatch]
+  );
 
   return <Content onPageTransition={onPageTransition} />;
 }
 
-const mapStateToProps = ({ base }) => ({
-  transition: base.transition,
-});
-const mapDispatchToProps = dispatch => ({
-  BaseActions: bindActionCreators(baseActions, dispatch),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ContentContainer);
+export default ContentContainer;

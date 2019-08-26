@@ -1,13 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Copy from '../components/organisms/Copy';
 
-function CopyContainer({ done }) {
+function CopyContainer() {
+  const { done } = useSelector(state => state.base);
+
   return <Copy done={done} />;
 }
 
-const mapStateToProps = ({ base }) => ({
-  done: base.done,
-});
-
-export default connect(mapStateToProps)(CopyContainer);
+export default CopyContainer;

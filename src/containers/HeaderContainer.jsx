@@ -1,17 +1,20 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as baseActions from '../modules/base';
+import React, { useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeInput, pageTransition } from '../modules/base';
 import Header from '../components/organisms/Header';
 
-function HeaderContainer({ BaseActions, text, title, transition }) {
-  const onChangeText = e => {
-    const { value } = e.target;
-    BaseActions.changeInput(value);
-  };
-  const onPageTransition = () => {
-    BaseActions.pageTransition(transition);
-  };
+function HeaderContainer({ title }) {
+  const { text } = useSelector(state => state.base);
+  const dispatch = useDispatch();
+
+  const onChangeText = useCallback(
+    e => dispatch(changeInput(e.target.value)),
+    [dispatch]
+  );
+  const onPageTransition = useCallback(
+    () => dispatch(pageTransition()),
+    [dispatch]
+  );
 
   return (
     <Header
@@ -23,14 +26,4 @@ function HeaderContainer({ BaseActions, text, title, transition }) {
   );
 }
 
-const mapStateToProps = ({ base }) => ({
-  text: base.text,
-});
-const mapDispatchToProps = dispatch => ({
-  BaseActions: bindActionCreators(baseActions, dispatch),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(HeaderContainer);
+export default HeaderContainer;

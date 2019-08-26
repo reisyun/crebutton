@@ -29,17 +29,17 @@ export default handleActions(
       ...state,
       text: payload,
     }),
-    [CONVERT_MODE]: (state, { payload }) => ({
+    [CONVERT_MODE]: state => ({
       ...state,
-      done: !payload,
+      done: !state.done,
     }),
-    [SLIDEBAR_CONTROL]: (state, { payload }) => ({
+    [SLIDEBAR_CONTROL]: state => ({
       ...state,
-      slideBar: !payload,
+      slideBar: !state.slideBar,
     }),
-    [PAGE_TRANSITION]: (state, { payload }) => ({
+    [PAGE_TRANSITION]: state => ({
       ...state,
-      transition: !payload,
+      transition: !state.transition,
     }),
   },
   initialState,

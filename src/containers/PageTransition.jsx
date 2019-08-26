@@ -1,8 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 
-const PageTransition = ({ children, transition }) => {
+const PageTransition = ({ children }) => {
+  const { transition } = useSelector(state => state.base);
+
   return (
     <CSSTransition in={transition} timeout={400} classNames="custom">
       {children}
@@ -10,8 +12,4 @@ const PageTransition = ({ children, transition }) => {
   );
 };
 
-const mapStateToProps = ({ base }) => ({
-  transition: base.transition,
-});
-
-export default connect(mapStateToProps)(PageTransition);
+export default PageTransition;

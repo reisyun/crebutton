@@ -4,6 +4,7 @@
   "private": true,
   "main": "./src/index.js",
   "dependencies": {
+    "html-react-parser": "^0.9.1",
     "lodash-template": "^1.0.0",
     "react": "^16.9.0",
     "react-copy-to-clipboard": "^5.0.1",

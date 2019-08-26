@@ -5,7 +5,6 @@ const Code = styled.code`
   color: #eefcff;
   font-size: 1.5rem;
   line-height: 1.5;
-  white-space: pre;
 `;
 
 export default Code;
