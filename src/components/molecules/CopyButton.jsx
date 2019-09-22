@@ -14,6 +14,7 @@ const CopyButtonBlock = styled(Button)`
   transform: translateY(0);
   transition-property: text-shadow, transform;
   transition-duration: 150ms;
+
   &:active {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     transform: translateY(0.25rem);

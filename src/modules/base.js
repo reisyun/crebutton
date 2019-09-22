@@ -2,7 +2,7 @@ import { createAction, handleActions } from 'redux-actions';
 
 const CHANGE_INPUT = 'base/CHANGE_INPUT';
 const CONVERT_MODE = 'base/CONVERT_MODE';
-const SLIDEBAR_CONTROL = 'base/TOGGLE_SLIDEBAR';
+const SLIDEBAR_CONTROL = 'base/SLIDEBAR_CONTROL';
 const PAGE_TRANSITION = 'base/PAGE_TRANSITION';
 
 export const changeInput = createAction(CHANGE_INPUT, text => text);
@@ -16,7 +16,7 @@ export const pageTransition = createAction(
   transition => transition,
 );
 
-const initialState = {
+const INITIAL_STATE = {
   text: '',
   done: false,
   slideBar: false,
@@ -42,5 +42,5 @@ export default handleActions(
       transition: !state.transition,
     }),
   },
-  initialState,
+  INITIAL_STATE,
 );

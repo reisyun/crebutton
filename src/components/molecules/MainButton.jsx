@@ -19,6 +19,7 @@ const MainButtonBlock = styled(Button)`
   word-break: break-all;
   transform: scale(1);
   transition: transform 0.2s;
+
   &:active {
     transform: scale(0.9);
   }
@@ -29,7 +30,7 @@ function MainButton({ text, onSlideBarControl }) {
 
   const handleClick = useCallback(() => {
     onDisabled();
-    onSlideBarControl && onSlideBarControl();
+    onSlideBarControl();
   }, [onDisabled, onSlideBarControl]);
 
   return (
@@ -39,4 +40,4 @@ function MainButton({ text, onSlideBarControl }) {
   );
 }
 
-export default MainButton
+export default MainButton;
