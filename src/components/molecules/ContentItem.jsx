@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import media from '../../lib/utils/media';
@@ -62,5 +63,11 @@ function ContentItem({ name, icon, onPageTransition }) {
     </ContentItemBlock>
   );
 }
+
+ContentItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  onPageTransition: PropTypes.func.isRequired,
+};
 
 export default ContentItem;

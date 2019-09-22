@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SlideBar from '../molecules/SlideBar.jsx';
 import MainButton from '../molecules/MainButton.jsx';
@@ -22,5 +23,12 @@ function Preview({ text, slideBar, onConvertMode, onSlideBarControl }) {
     </PreviewWrapper>
   );
 }
+
+Preview.propTypes = {
+  text: PropTypes.string.isRequired,
+  slideBar: PropTypes.bool.isRequired,
+  onConvertMode: PropTypes.func.isRequired,
+  onSlideBarControl: PropTypes.func.isRequired,
+};
 
 export default Preview;

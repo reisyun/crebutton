@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const Custom = styled.section`
@@ -33,5 +34,11 @@ function CustomTemplate({ children, header, icon }) {
     </Custom>
   );
 }
+
+CustomTemplate.propTypes = {
+  children: PropTypes.element.isRequired,
+  header: PropTypes.element.isRequired,
+  icon: PropTypes.string,
+};
 
 export default CustomTemplate;

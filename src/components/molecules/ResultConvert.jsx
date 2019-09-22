@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import media from '../../lib/utils/media';
 import { back } from '../../static/svg';
@@ -35,5 +36,9 @@ function ResultConvert({ onConvertMode }) {
     </ResultConvertBlock>
   );
 }
+
+ResultConvert.propTypes = {
+  onConvertMode: PropTypes.func.isRequired,
+};
 
 export default ResultConvert;

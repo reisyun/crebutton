@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Input from '../atoms/Input';
 
@@ -24,5 +25,10 @@ function TextInput({ text, onChangeText }) {
     />
   );
 }
+
+TextInput.propTypes = {
+  text: PropTypes.string.isRequired,
+  onChangeText: PropTypes.func.isRequired,
+};
 
 export default TextInput;

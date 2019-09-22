@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { close } from '../../static/svg';
@@ -20,5 +21,9 @@ function Close({ onPageTransition }) {
     </CloseBlock>
   );
 }
+
+Close.propTypes = {
+  onPageTransition: PropTypes.func,
+};
 
 export default Close;

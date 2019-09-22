@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BaseTemplate from '../components/templates/BaseTemplate';
 import PageTransition from '../containers/PageTransition';
 import ResultContainer from '../containers/ResultContainer';
@@ -23,5 +24,9 @@ function Layout({ custom }) {
     />
   );
 }
+
+Layout.propTypes = {
+  custom: PropTypes.element.isRequired,
+};
 
 export default Layout;

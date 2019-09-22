@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SourceCode from '../molecules/SourceCode';
 import ResultConvert from '../molecules/ResultConvert';
@@ -20,5 +21,10 @@ function Result({ done, onConvertMode }) {
     </ResultWrapper>
   );
 }
+
+Result.propTypes = {
+  done: PropTypes.bool.isRequired,
+  onConvertMode: PropTypes.func.isRequired,
+};
 
 export default Result;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Title from '../atoms/Title';
 import Close from '../molecules/Close';
@@ -21,5 +22,12 @@ function Header({ text, title, onChangeText, onPageTransition }) {
     </HeaderWrapper>
   );
 }
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  onChangeText: PropTypes.func.isRequired,
+  onPageTransition: PropTypes.func.isRequired,
+};
 
 export default Header;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import media from '../../lib/utils/media';
 import { arrow } from '../../static/svg';
@@ -42,5 +43,9 @@ function PreviewConvert({ onConvertMode }) {
     </PreviewConvertBlcok>
   );
 }
+
+PreviewConvert.propTypes = {
+  onConvertMode: PropTypes.func.isRequired,
+};
 
 export default PreviewConvert;

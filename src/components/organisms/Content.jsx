@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { color, shape, effect, transform } from '../../static/svg';
 import ContentItem from '../../components/molecules/ContentItem';
@@ -20,6 +21,10 @@ function Content({ onPageTransition }) {
 
   return <ContentWrapper>{contentList}</ContentWrapper>;
 }
+
+Content.propTypes = {
+  onPageTransition: PropTypes.func.isRequired,
+};
 
 const contents = [
   {

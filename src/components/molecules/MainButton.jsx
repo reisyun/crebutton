@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import useDisabled from '../../lib/hooks/useDisabled';
 import Button from '../atoms/Button';
@@ -39,5 +40,10 @@ function MainButton({ text, onSlideBarControl }) {
     </MainButtonBlock>
   );
 }
+
+MainButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  onSlideBarControl: PropTypes.func.isRequired,
+};
 
 export default MainButton;

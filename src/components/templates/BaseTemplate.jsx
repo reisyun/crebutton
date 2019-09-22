@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import media from '../../lib/utils/media';
 
@@ -39,5 +40,10 @@ function BaseTemplate({ viewer, panel }) {
     </Base>
   );
 }
+
+BaseTemplate.propTypes = {
+  viewer: PropTypes.element.isRequired,
+  panel: PropTypes.element.isRequired,
+};
 
 export default BaseTemplate;
