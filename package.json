@@ -1,51 +1,43 @@
 {
   "name": "crebutton",
-  "version": "0.2.0",
   "private": true,
-  "main": "./src/index.js",
+  "description": "Create button app",
+  "version": "0.3.0",
+  "author": "reisyun",
+  "bugs": {
+    "url": "https://github.com/reisyun/crebutton/issues"
+  },
   "dependencies": {
-    "html-react-parser": "^0.9.1",
-    "lodash-template": "^1.0.0",
+    "gatsby": "^2.15.20",
+    "gatsby-image": "^2.2.20",
+    "gatsby-plugin-manifest": "^2.2.18",
+    "gatsby-plugin-offline": "^3.0.8",
+    "gatsby-plugin-react-helmet": "^3.1.8",
+    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-source-filesystem": "^2.1.26",
+    "gatsby-transformer-sharp": "^2.2.16",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.9.0",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "react-transition-group": "^4.2.2",
-    "redux": "^4.0.4",
-    "redux-actions": "^2.6.5",
+    "react-helmet": "^5.2.1",
+    "react-transition-group": "^4.3.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "react-hot-loader": "^4.12.13",
-    "redux-devtools-extension": "^2.13.8"
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "babel": {
-    "plugins": [
-      "react-hot-loader/babel"
-    ]
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   }
 }

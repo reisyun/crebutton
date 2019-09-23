@@ -16,14 +16,7 @@ const TextInputBlock = styled(Input)`
 `;
 
 function TextInput({ text, onChangeText }) {
-  return (
-    <TextInputBlock
-      type="text"
-      value={text}
-      placeholder="버튼에 들어갈 값을 입력해주세요"
-      onChange={onChangeText}
-    />
-  );
+  return <TextInputBlock value={text} onChange={onChangeText} />;
 }
 
 TextInput.propTypes = {

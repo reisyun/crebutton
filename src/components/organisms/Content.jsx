@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { color, shape, effect, transform } from '../../static/svg';
+import { color, shape, effect, transform } from '../../assets/svg';
 import ContentItem from '../../components/molecules/ContentItem';
 
 const ContentWrapper = styled.nav`

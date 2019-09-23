@@ -16,9 +16,9 @@ const HeaderWrapper = styled.header`
 function Header({ text, title, onChangeText, onPageTransition }) {
   return (
     <HeaderWrapper>
-      {title !== 'custom' && <Close onPageTransition={onPageTransition} />}
       <Title>{title}</Title>
       <TextInput text={text} onChangeText={onChangeText} />
+      {title !== 'Custom' && <Close onPageTransition={onPageTransition} />}
     </HeaderWrapper>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import media from '../../lib/utils/media';
 import Name from '../atoms/Name';
 import Icon from '../atoms/Icon';
@@ -54,7 +54,7 @@ const StyledName = styled(Name)`
 function ContentItem({ name, icon, onPageTransition }) {
   return (
     <ContentItemBlock onClick={onPageTransition}>
-      <Link to={`/${name}`} key={name}>
+      <Link to={`/${name}/`}>
         <StyledName fontSize="large">
           {name}
           <Icon icon={icon} size="6.25rem" />
@@ -66,7 +66,7 @@ function ContentItem({ name, icon, onPageTransition }) {
 
 ContentItem.propTypes = {
   name: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
   onPageTransition: PropTypes.func.isRequired,
 };
 
