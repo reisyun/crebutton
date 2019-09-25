@@ -45,13 +45,5 @@ module.exports = {
         transpileTemplateLiterals: false,
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'RMAPI',
-        fieldName: 'rickAndMorty',
-        url: 'https://rickandmortyapi.com/graphql',
-      },
-    },
   ],
 };

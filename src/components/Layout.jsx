@@ -4,10 +4,10 @@ import styled, { css } from 'styled-components';
 import GlobalStyle from '../lib/styles/globalStyle';
 import SEO from './SEO';
 import BaseTemplate from './templates/BaseTemplate';
-import Result from './organisms/Result';
-import Preview from './organisms/Preview';
-import Copy from './organisms/Copy';
-import Header from './organisms/Header';
+import ResultContainer from '../containers/ResultContainer';
+import PreviewContainer from '../containers/PreviewContainer';
+import CopyContainer from '../containers/CopyContainer';
+import HeaderContainer from '../containers/HeaderContainer';
 
 const Custom = styled.div`
   overflow-y: auto;
@@ -41,16 +41,16 @@ function Layout({ children, title, icon }) {
       <BaseTemplate
         viewer={
           <React.Fragment>
-            <Result />
-            <Preview />
+            <ResultContainer />
+            <PreviewContainer />
           </React.Fragment>
         }
         panel={
           <React.Fragment>
-            <Copy />
+            <CopyContainer />
 
             <Custom>
-              {title && <Header title={title} />}
+              {title && <HeaderContainer title={title} />}
               <Container icon={icon}>{children}</Container>
             </Custom>
           </React.Fragment>
