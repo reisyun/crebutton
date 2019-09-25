@@ -54,7 +54,7 @@ const StyledName = styled(Name)`
 function ContentItem({ name, icon, onPageTransition }) {
   return (
     <ContentItemBlock onClick={onPageTransition}>
-      <Link to={`/${name}/`}>
+      <Link to={`/${name}`}>
         <StyledName fontSize="large">
           {name}
           <Icon icon={icon} size="6.25rem" />

@@ -8,7 +8,7 @@ const StyledName = styled(Name)`
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 8rem;
+  font-size: 6rem;
   color: #353b48;
   font-weight: 700;
   font-family: Roboto, Helvetica, sans-serif;
@@ -19,7 +19,7 @@ function NotFound() {
   return (
     <Layout>
       <Close />
-      <StyledName>404</StyledName>
+      <StyledName>Not Found</StyledName>
     </Layout>
   );
 }

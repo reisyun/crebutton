@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import media from '../../lib/utils/media';
-import GlobalStyle from '../../lib/styles/globalStyle';
 
 const Base = styled.main`
   display: flex;
@@ -16,12 +15,12 @@ const Base = styled.main`
   `}
 `;
 
-const Viewer = styled.article`
+const Viewer = styled.section`
   width: 100%;
   height: 100vh;
 `;
 
-const Panel = styled.article`
+const Panel = styled.section`
   z-index: 200;
   position: relative;
   width: 80%;
@@ -38,7 +37,6 @@ const Panel = styled.article`
 function BaseTemplate({ viewer, panel }) {
   return (
     <Base>
-      <GlobalStyle />
       <Viewer>{viewer}</Viewer>
       <Panel>{panel}</Panel>
     </Base>

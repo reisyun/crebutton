@@ -3,19 +3,23 @@ module.exports = {
     title: `Crebutton`,
     description: `Create button app`,
     author: `@reisyun`,
+    image: `/static/favicon.ico`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
     {
+      // Source filesystem
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      // Manifest
       resolve: `gatsby-plugin-manifest`,
       options: {
         short_name: `crebutton`,
@@ -33,8 +37,21 @@ module.exports = {
         background_color: `#2f3542`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      // Styled components
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+        transpileTemplateLiterals: false,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'RMAPI',
+        fieldName: 'rickAndMorty',
+        url: 'https://rickandmortyapi.com/graphql',
+      },
+    },
   ],
 };

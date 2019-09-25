@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import SourceCode from '../molecules/SourceCode';
 import ResultConvert from '../molecules/ResultConvert';
 
-const ResultWrapper = styled.section`
+const ResultWrapper = styled.div`
   overflow-y: auto;
   position: relative;
   margin-top: ${props => (props.done ? '0vh' : '-100vh')};

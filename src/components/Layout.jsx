@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import GlobalStyle from '../lib/styles/globalStyle';
+import SEO from './SEO';
 import BaseTemplate from './templates/BaseTemplate';
-import PageTransition from './PageTransition';
 import Result from './organisms/Result';
 import Preview from './organisms/Preview';
 import Copy from './organisms/Copy';
 import Header from './organisms/Header';
 
-const Custom = styled.section`
+const Custom = styled.div`
   overflow-y: auto;
   height: inherit;
 `;
@@ -34,26 +35,28 @@ const Container = styled.div`
 
 function Layout({ children, title, icon }) {
   return (
-    <BaseTemplate
-      viewer={
-        <React.Fragment>
-          <Result />
-          <Preview />
-        </React.Fragment>
-      }
-      panel={
-        <React.Fragment>
-          <Copy />
+    <React.Fragment>
+      <GlobalStyle />
+      <SEO />
+      <BaseTemplate
+        viewer={
+          <React.Fragment>
+            <Result />
+            <Preview />
+          </React.Fragment>
+        }
+        panel={
+          <React.Fragment>
+            <Copy />
 
-          <PageTransition>
             <Custom>
-              <Header title={title} />
+              {title && <Header title={title} />}
               <Container icon={icon}>{children}</Container>
             </Custom>
-          </PageTransition>
-        </React.Fragment>
-      }
-    />
+          </React.Fragment>
+        }
+      />
+    </React.Fragment>
   );
 }
 

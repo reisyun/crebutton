@@ -1,10 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from './reset';
-import { pageTransition } from './pageTransition';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  ${pageTransition}
   
   body {
     box-sizing: border-box;
