@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { sad } from '../../assets/svg';
+import CustomTemplate from '../../components/templates/CustomTemplate';
 import Name from '../../components/atoms/Name';
-import Close from '../../components/molecules/Close';
 
 const StyledName = styled(Name)`
   position: absolute;
@@ -16,10 +17,9 @@ const StyledName = styled(Name)`
 
 function NotFound() {
   return (
-    <React.Fragment>
-      <Close />
-      <StyledName>NotFound</StyledName>
-    </React.Fragment>
+    <CustomTemplate title="not found" icon={sad}>
+      <StyledName>404</StyledName>
+    </CustomTemplate>
   );
 }
 
