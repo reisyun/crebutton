@@ -37,7 +37,7 @@ function CustomTemplate({ children, title, icon }) {
 }
 
 CustomTemplate.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
   icon: PropTypes.string,
 };
 

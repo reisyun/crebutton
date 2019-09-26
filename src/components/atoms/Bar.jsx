@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const Bar = styled.div`
@@ -11,5 +12,15 @@ const Bar = styled.div`
     transition-delay: ${count * 0.1}s;
   `}
 `;
+
+Bar.propTypes = {
+  slideBar: PropTypes.bool.isRequired,
+  count: PropTypes.number.isRequired,
+};
+
+Bar.defaultProps = {
+  slideBar: false,
+  count: 4,
+};
 
 export default Bar;

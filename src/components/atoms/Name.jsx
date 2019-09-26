@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const size = {
@@ -16,5 +17,13 @@ const Name = styled.strong`
       font-size: ${size[props.fontSize]}rem;
     `}
 `;
+
+Name.propTypes = {
+  fontSize: PropTypes.string,
+};
+
+Name.defaultProps = {
+  fontSize: 'small',
+};
 
 export default Name;

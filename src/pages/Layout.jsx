@@ -26,7 +26,7 @@ function Layout({ custom }) {
 }
 
 Layout.propTypes = {
-  custom: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  custom: PropTypes.element.isRequired,
 };
 
 export default Layout;

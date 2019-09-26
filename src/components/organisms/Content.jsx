@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { pageTransition } from '../../modules/base';
@@ -29,10 +28,6 @@ function Content() {
 
   return <ContentWrapper>{contentList}</ContentWrapper>;
 }
-
-Content.propTypes = {
-  onPageTransition: PropTypes.func.isRequired,
-};
 
 const contents = [
   {
