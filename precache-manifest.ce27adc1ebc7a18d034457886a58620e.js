@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "845c9f3d0445971e31e94075f14129cb",
+    "revision": "5a2254c6cae8d5a19145353f348b61b3",
     "url": "/crebutton/index.html"
   },
   {
-    "revision": "8cbcab78a8654b892f33",
-    "url": "/crebutton/static/js/2.f4be31f9.chunk.js"
+    "revision": "dfcf6b7eb1f10e91311b",
+    "url": "/crebutton/static/js/2.9da8c068.chunk.js"
   },
   {
-    "revision": "97bcf835e72916565267",
-    "url": "/crebutton/static/js/main.dd741717.chunk.js"
+    "revision": "7d4d519811ca620b019a",
+    "url": "/crebutton/static/js/main.c158f7d8.chunk.js"
   },
   {
     "revision": "99d642523a90ddf882ca",
@@ -46,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c87e2b91d4f77892afcbd102b40b224d",
     "url": "/crebutton/static/media/icon-transform.c87e2b91.svg"
+  },
+  {
+    "revision": "998025e443d9ea82fb0b5b32c07fcc19",
+    "url": "/crebutton/static/media/logo.998025e4.png"
   }
 ]);
