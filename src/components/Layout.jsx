@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import GlobalStyle from '../lib/styles/globalStyle';
-import SEO from '../SEO';
 import BaseTemplate from './templates/BaseTemplate';
 import Result from './organisms/Result';
 import Preview from './organisms/Preview';
@@ -37,7 +36,6 @@ function Layout({ children, title, icon }) {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <SEO />
       <BaseTemplate
         viewer={
           <>
@@ -48,7 +46,6 @@ function Layout({ children, title, icon }) {
         panel={
           <>
             <Copy />
-
             <Custom>
               {title && <Header title={title} />}
               <Container icon={icon}>{children}</Container>
@@ -61,8 +58,8 @@ function Layout({ children, title, icon }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired,
-  header: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  title: PropTypes.string,
   icon: PropTypes.string,
 };
 

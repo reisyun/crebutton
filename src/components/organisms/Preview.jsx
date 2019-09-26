@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { convertMode, slideBarControl } from '../../modules/base';
@@ -35,12 +34,5 @@ function Preview() {
     </PreviewWrapper>
   );
 }
-
-Preview.propTypes = {
-  text: PropTypes.string.isRequired,
-  slideBar: PropTypes.bool.isRequired,
-  onConvertMode: PropTypes.func.isRequired,
-  onSlideBarControl: PropTypes.func.isRequired,
-};
 
 export default Preview;

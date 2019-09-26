@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import media from '../../lib/utils/media';
 import Name from '../atoms/Name';
 import Icon from '../atoms/Icon';
@@ -54,12 +54,12 @@ const StyledName = styled(Name)`
 function ContentItem({ name, icon }) {
   return (
     <ContentItemBlock>
-      <Link to={`/${name}`}>
+      <AniLink fade to={`/${name}`}>
         <StyledName fontSize="large">
           {name}
           <Icon icon={icon} size="6.25rem" />
         </StyledName>
-      </Link>
+      </AniLink>
     </ContentItemBlock>
   );
 }
@@ -67,7 +67,6 @@ function ContentItem({ name, icon }) {
 ContentItem.propTypes = {
   name: PropTypes.string.isRequired,
   icon: PropTypes.node.isRequired,
-  onPageTransition: PropTypes.func.isRequired,
 };
 
 export default ContentItem;

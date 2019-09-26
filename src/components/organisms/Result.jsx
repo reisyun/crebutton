@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { convertMode } from '../../modules/base';
@@ -30,10 +29,5 @@ function Result() {
     </ResultWrapper>
   );
 }
-
-Result.propTypes = {
-  done: PropTypes.bool.isRequired,
-  onConvertMode: PropTypes.func.isRequired,
-};
 
 export default Result;

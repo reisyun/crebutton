@@ -19,12 +19,9 @@ function Header(props) {
   const { text } = useSelector(state => state.base);
   const dispatch = useDispatch();
 
-  const onChangeText = useCallback(
-    e => {
-      return dispatch(changeInput(e.target.value));
-    },
-    [dispatch]
-  );
+  const onChangeText = useCallback(event => {
+    return dispatch(changeInput(event.target.value));
+  }, [dispatch]);
 
   return (
     <HeaderWrapper>
@@ -36,10 +33,7 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  text: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  onChangeText: PropTypes.func.isRequired,
-  onPageTransition: PropTypes.func.isRequired,
+  title: PropTypes.string,
 };
 
 export default Header;

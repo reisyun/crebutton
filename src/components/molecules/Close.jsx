@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { close } from '../../assets/svg';
 import Icon from '../atoms/Icon';
 
@@ -15,9 +15,9 @@ const CloseBlock = styled.span`
 function Close() {
   return (
     <CloseBlock>
-      <Link to="/" replace>
+      <AniLink fade to="/">
         <Icon icon={close} size="1.5rem" />
-      </Link>
+      </AniLink>
     </CloseBlock>
   );
 }

@@ -12,7 +12,7 @@ const Icon = styled.img.attrs(({ icon }) => ({
 
 Icon.propTypes = {
   icon: PropTypes.node.isRequired,
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
 };
 Icon.defaultProps = {
   icon: sad,
