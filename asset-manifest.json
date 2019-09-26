@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/crebutton/static/js/main.d69deeb3.chunk.js",
+    "main.js.map": "/crebutton/static/js/main.d69deeb3.chunk.js.map",
+    "runtime-main.js": "/crebutton/static/js/runtime-main.19b8d523.js",
+    "runtime-main.js.map": "/crebutton/static/js/runtime-main.19b8d523.js.map",
+    "static/js/2.b23192d3.chunk.js": "/crebutton/static/js/2.b23192d3.chunk.js",
+    "static/js/2.b23192d3.chunk.js.map": "/crebutton/static/js/2.b23192d3.chunk.js.map",
+    "index.html": "/crebutton/index.html",
+    "precache-manifest.c6a68be7d4680f38295714aa3a9250b8.js": "/crebutton/precache-manifest.c6a68be7d4680f38295714aa3a9250b8.js",
+    "service-worker.js": "/crebutton/service-worker.js",
+    "static/media/icon-arrow.svg": "/crebutton/static/media/icon-arrow.68d956b3.svg",
+    "static/media/icon-back.svg": "/crebutton/static/media/icon-back.adffeffe.svg",
+    "static/media/icon-close.svg": "/crebutton/static/media/icon-close.83808290.svg",
+    "static/media/icon-color.svg": "/crebutton/static/media/icon-color.fefbb60d.svg",
+    "static/media/icon-effect.svg": "/crebutton/static/media/icon-effect.34cb79fe.svg",
+    "static/media/icon-sad.svg": "/crebutton/static/media/icon-sad.50c96776.svg",
+    "static/media/icon-shape.svg": "/crebutton/static/media/icon-shape.8ea8e1d7.svg",
+    "static/media/icon-transform.svg": "/crebutton/static/media/icon-transform.c87e2b91.svg"
+  }
+}
