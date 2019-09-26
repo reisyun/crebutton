@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { useSelector } from 'react-redux';
 import CopyButton from '../molecules/CopyButton';
 
 const CopyWrapper = styled.section`
@@ -27,16 +27,14 @@ const CopyWrapper = styled.section`
     `}
 `;
 
-function Copy({ done }) {
+function Copy() {
+  const { done } = useSelector(state => state.base);
+
   return (
     <CopyWrapper done={done}>
       <CopyButton />
     </CopyWrapper>
   );
 }
-
-Copy.propTypes = {
-  done: PropTypes.bool.isRequired,
-};
 
 export default Copy;

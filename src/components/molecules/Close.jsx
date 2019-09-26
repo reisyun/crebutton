@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { close } from '../../static/svg';
+import { close } from '../../assets/svg';
 import Icon from '../atoms/Icon';
 
 const CloseBlock = styled.span`

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import media from '../../lib/utils/media';
-import { back } from '../../static/svg';
+import { back } from '../../assets/svg';
 import Convert from '../atoms/Convert';
 import Icon from '../atoms/Icon';
 

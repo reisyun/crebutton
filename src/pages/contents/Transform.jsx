@@ -1,13 +1,10 @@
 import React from 'react';
-import { transform } from '../../static/svg';
+import { transform } from '../../assets/svg';
 import CustomTemplate from '../../components/templates/CustomTemplate';
-import HeaderContainer from '../../containers/HeaderContainer';
 
 function Transform() {
   return (
-    <CustomTemplate
-      icon={transform}
-      header={<HeaderContainer title="Transform" />}>
+    <CustomTemplate title="transform" icon={transform}>
       Transform Content
     </CustomTemplate>
   );

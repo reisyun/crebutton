@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import Header from '../../components/organisms/Header';
 
 const Custom = styled.section`
   overflow-y: auto;
   height: inherit;
 `;
-const Content = styled.div`
+const Container = styled.div`
   margin-top: 1.5rem;
   padding: 0 1.5rem;
 
@@ -26,18 +27,17 @@ const Content = styled.div`
     `}
 `;
 
-function CustomTemplate({ children, header, icon }) {
+function CustomTemplate({ children, title, icon }) {
   return (
     <Custom>
-      {header}
-      <Content icon={icon}>{children}</Content>
+      {title && <Header title={title} />}
+      <Container icon={icon}>{children}</Container>
     </Custom>
   );
 }
 
 CustomTemplate.propTypes = {
   children: PropTypes.element.isRequired,
-  header: PropTypes.element.isRequired,
   icon: PropTypes.string,
 };
 

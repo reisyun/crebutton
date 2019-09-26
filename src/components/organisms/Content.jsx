@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { color, shape, effect, transform } from '../../static/svg';
+import { useDispatch } from 'react-redux';
+import { pageTransition } from '../../modules/base';
+import { color, shape, effect, transform } from '../../assets/svg';
 import ContentItem from '../../components/molecules/ContentItem';
 
 const ContentWrapper = styled.nav`
@@ -9,7 +11,13 @@ const ContentWrapper = styled.nav`
   flex-direction: column;
 `;
 
-function Content({ onPageTransition }) {
+function Content() {
+  const dispatch = useDispatch();
+
+  const onPageTransition = useCallback(() => {
+    return dispatch(pageTransition());
+  }, [dispatch]);
+
   const contentList = contents.map(({ name, icon }) => (
     <ContentItem
       name={name}

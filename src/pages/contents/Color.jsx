@@ -1,11 +1,10 @@
 import React from 'react';
-import { color } from '../../static/svg';
+import { color } from '../../assets/svg';
 import CustomTemplate from '../../components/templates/CustomTemplate';
-import HeaderContainer from '../../containers/HeaderContainer';
 
 function Color() {
   return (
-    <CustomTemplate icon={color} header={<HeaderContainer title="Color" />}>
+    <CustomTemplate title="color" icon={color}>
       Color Content
     </CustomTemplate>
   );

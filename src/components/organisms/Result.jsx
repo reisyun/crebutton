@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
+import { convertMode } from '../../modules/base';
 import SourceCode from '../molecules/SourceCode';
 import ResultConvert from '../molecules/ResultConvert';
 
@@ -13,7 +14,14 @@ const ResultWrapper = styled.section`
   transition: margin-top 0.5s ease-in-out;
 `;
 
-function Result({ done, onConvertMode }) {
+function Result() {
+  const { done } = useSelector(state => state.base);
+  const dispatch = useDispatch();
+
+  const onConvertMode = useCallback(() => {
+    return dispatch(convertMode());
+  }, [dispatch]);
+
   return (
     <ResultWrapper done={done}>
       <SourceCode />
@@ -21,10 +29,5 @@ function Result({ done, onConvertMode }) {
     </ResultWrapper>
   );
 }
-
-Result.propTypes = {
-  done: PropTypes.bool.isRequired,
-  onConvertMode: PropTypes.func.isRequired,
-};
 
 export default Result;

@@ -1,11 +1,10 @@
 import React from 'react';
-import { shape } from '../../static/svg';
+import { shape } from '../../assets/svg';
 import CustomTemplate from '../../components/templates/CustomTemplate';
-import HeaderContainer from '../../containers/HeaderContainer';
 
 function Shape() {
   return (
-    <CustomTemplate icon={shape} header={<HeaderContainer title="Shape" />}>
+    <CustomTemplate title="shape" icon={shape}>
       Shape Content
     </CustomTemplate>
   );

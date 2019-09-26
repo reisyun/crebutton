@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseTemplate from '../components/templates/BaseTemplate';
-import PageTransition from '../containers/PageTransition';
-import ResultContainer from '../containers/ResultContainer';
-import PreviewContainer from '../containers/PreviewContainer';
-import CopyContainer from '../containers/CopyContainer';
+import PageTransition from '../components/PageTransition';
+import Result from '../components/organisms/Result';
+import Preview from '../components/organisms/Preview';
+import Copy from '../components/organisms/Copy';
 
 function Layout({ custom }) {
   return (
     <BaseTemplate
       viewer={
         <React.Fragment>
-          <ResultContainer />
-          <PreviewContainer />
+          <Result />
+          <Preview />
         </React.Fragment>
       }
       panel={
         <React.Fragment>
-          <CopyContainer />
+          <Copy />
           <PageTransition>{custom}</PageTransition>
         </React.Fragment>
       }
@@ -26,7 +26,7 @@ function Layout({ custom }) {
 }
 
 Layout.propTypes = {
-  custom: PropTypes.element.isRequired,
+  custom: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
 };
 
 export default Layout;
