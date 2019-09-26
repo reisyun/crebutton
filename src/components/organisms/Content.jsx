@@ -9,14 +9,9 @@ const ContentWrapper = styled.nav`
   flex-direction: column;
 `;
 
-function Content({ onPageTransition }) {
+function Content() {
   const contentList = contents.map(({ name, icon }) => (
-    <ContentItem
-      name={name}
-      icon={icon}
-      onPageTransition={onPageTransition}
-      key={`content-${name}`}
-    />
+    <ContentItem name={name} icon={icon} key={`content-${name}`} />
   ));
 
   return <ContentWrapper>{contentList}</ContentWrapper>;

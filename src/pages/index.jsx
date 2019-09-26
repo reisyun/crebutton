@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import ContentContainer from '../containers/ContentContainer';
+import Content from '../components/organisms/Content';
 
 function Main() {
   return (
     <Layout title="Custom">
-      <ContentContainer />
+      <Content />
     </Layout>
   );
 }

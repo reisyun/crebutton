@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeInput } from '../../modules/base';
 import Title from '../atoms/Title';
 import Close from '../molecules/Close';
 import TextInput from '../molecules/TextInput';
@@ -13,12 +15,22 @@ const HeaderWrapper = styled.header`
   background-color: #f1f2f6;
 `;
 
-function Header({ text, title, onChangeText, onPageTransition }) {
+function Header(props) {
+  const { text } = useSelector(state => state.base);
+  const dispatch = useDispatch();
+
+  const onChangeText = useCallback(
+    e => {
+      return dispatch(changeInput(e.target.value));
+    },
+    [dispatch]
+  );
+
   return (
     <HeaderWrapper>
-      <Title>{title}</Title>
+      <Title>{props.title}</Title>
       <TextInput text={text} onChangeText={onChangeText} />
-      {title !== 'Custom' && <Close onPageTransition={onPageTransition} />}
+      {props.title !== 'Custom' && <Close />}
     </HeaderWrapper>
   );
 }
