@@ -4,7 +4,7 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import rootReducer from './modules';
 import GlobalStyle from './lib/styles/globalStyle';
 import App from './components/App';
@@ -14,9 +14,9 @@ const store = createStore(rootReducer, composeWithDevTools());
 ReactDOM.render(
   <Provider store={store}>
     <GlobalStyle />
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root'),
 );

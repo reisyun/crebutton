@@ -15,7 +15,6 @@ const MainButtonBlock = styled(Button)`
   background-color: #489cea;
   color: #fff;
   font-size: 2rem;
-  font-weight: 500;
   word-wrap: break-word;
   word-break: break-all;
   transform: scale(1);

@@ -1,18 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from './reset';
+import { typography } from './typography';
 import { pageTransition } from './pageTransition';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  ${typography}
   ${pageTransition}
   
   body {
     box-sizing: border-box;
     user-select: none;
     color: #212121;
-
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Cabin', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
