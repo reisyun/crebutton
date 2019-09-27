@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-const Bar = styled.div`
+const Bar = styled.span`
   ${({ slideBar, count }) => css`
     flex-grow: 1;
     height: 100vh;

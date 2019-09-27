@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { useSelector } from 'react-redux';
 import CopyButton from '../molecules/CopyButton';
 
-const CopyWrapper = styled.section`
+const CopyWrapper = styled.div`
   z-index: 999;
   position: absolute;
   top: 0;

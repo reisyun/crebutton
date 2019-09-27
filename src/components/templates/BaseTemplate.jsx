@@ -14,11 +14,11 @@ const Base = styled.main`
     height: auto;
   `}
 `;
-const Viewer = styled.article`
+const Viewer = styled.section`
   width: 100%;
   height: 100vh;
 `;
-const Panel = styled.article`
+const Panel = styled.section`
   z-index: 200;
   position: relative;
   width: 80%;

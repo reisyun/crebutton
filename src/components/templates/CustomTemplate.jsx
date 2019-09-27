@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import Header from '../../components/organisms/Header';
 
-const Custom = styled.section`
+const Custom = styled.div`
   overflow-y: auto;
   height: inherit;
 `;

@@ -6,7 +6,7 @@ import SlideBar from '../molecules/SlideBar.jsx';
 import MainButton from '../molecules/MainButton.jsx';
 import PreviewConvert from '../molecules/PreviewConvert';
 
-const PreviewWrapper = styled.section`
+const PreviewWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
