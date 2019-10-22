@@ -17,6 +17,7 @@ const PreviewWrapper = styled.div`
 
 function Preview() {
   const { text, slideBar } = useSelector(state => state.base);
+  const { color } = useSelector(state => state.custom);
   const dispatch = useDispatch();
 
   const onConvertMode = useCallback(() => {
@@ -29,7 +30,11 @@ function Preview() {
   return (
     <PreviewWrapper>
       <SlideBar slideBar={slideBar} />
-      <MainButton text={text} onSlideBarControl={onSlideBarControl} />
+      <MainButton
+        text={text}
+        color={color}
+        onSlideBarControl={onSlideBarControl}
+      />
       <PreviewConvert onConvertMode={onConvertMode} />
     </PreviewWrapper>
   );

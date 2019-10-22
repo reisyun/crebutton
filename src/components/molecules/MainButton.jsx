@@ -12,20 +12,15 @@ const MainButtonBlock = styled(Button)`
   width: 17.5rem;
   height: 5rem;
   border-radius: 2.5rem;
-  background-color: #489cea;
+  background-color: ${props => props.color};
   color: #fff;
   font-size: 2rem;
   word-wrap: break-word;
   word-break: break-all;
-  transform: scale(1);
-  transition: transform 0.2s;
-
-  &:active {
-    transform: scale(0.9);
-  }
+  transition: background-color 0.3s;
 `;
 
-function MainButton({ text, onSlideBarControl }) {
+function MainButton({ text, color, onSlideBarControl }) {
   const [disabled, onDisabled] = useDisabled(4 * 200);
 
   const handleClick = useCallback(() => {
@@ -34,7 +29,7 @@ function MainButton({ text, onSlideBarControl }) {
   }, [onDisabled, onSlideBarControl]);
 
   return (
-    <MainButtonBlock disabled={disabled} onClick={handleClick}>
+    <MainButtonBlock color={color} disabled={disabled} onClick={handleClick}>
       {text ? text : 'Click this'}
     </MainButtonBlock>
   );
@@ -42,6 +37,7 @@ function MainButton({ text, onSlideBarControl }) {
 
 MainButton.propTypes = {
   text: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
   onSlideBarControl: PropTypes.func.isRequired,
 };
 

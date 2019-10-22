@@ -16,6 +16,7 @@ const Container = styled.div`
     css`
       &::before {
         content: '';
+        z-index: -1;
         opacity: 0.25;
         position: absolute;
         right: 1.5rem;
