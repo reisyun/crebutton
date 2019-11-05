@@ -6,7 +6,9 @@ const Input = styled.input.attrs(({ type, value, placeholder }) => ({
   value,
   placeholder,
 }))`
-  all: unset;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 `;
 
 Input.propTypes = {

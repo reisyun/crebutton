@@ -15,7 +15,7 @@ function App() {
                 exact={exact}
                 path={path}
                 component={content}
-                key={`content-${content}`}
+                key={`content-${path}`}
               />
             ))}
           </Switch>

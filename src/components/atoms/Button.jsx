@@ -5,7 +5,9 @@ const Button = styled.button.attrs(({ disabled }) => ({
   type: 'button',
   disabled,
 }))`
-  all: unset;
+  background: none;
+  border: none;
+  outline: none;
   cursor: pointer;
 `;
 
