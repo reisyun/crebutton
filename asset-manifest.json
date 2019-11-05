@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/crebutton/static/js/main.acd9db6e.chunk.js",
-    "main.js.map": "/crebutton/static/js/main.acd9db6e.chunk.js.map",
+    "main.js": "/crebutton/static/js/main.5783fbaa.chunk.js",
+    "main.js.map": "/crebutton/static/js/main.5783fbaa.chunk.js.map",
     "runtime-main.js": "/crebutton/static/js/runtime-main.b3e87dfe.js",
     "runtime-main.js.map": "/crebutton/static/js/runtime-main.b3e87dfe.js.map",
-    "static/js/2.2b63332a.chunk.js": "/crebutton/static/js/2.2b63332a.chunk.js",
-    "static/js/2.2b63332a.chunk.js.map": "/crebutton/static/js/2.2b63332a.chunk.js.map",
+    "static/js/2.da6021c1.chunk.js": "/crebutton/static/js/2.da6021c1.chunk.js",
+    "static/js/2.da6021c1.chunk.js.map": "/crebutton/static/js/2.da6021c1.chunk.js.map",
     "index.html": "/crebutton/index.html",
-    "precache-manifest.5fcad7fec8ce87d2aad1767512fa1370.js": "/crebutton/precache-manifest.5fcad7fec8ce87d2aad1767512fa1370.js",
+    "precache-manifest.59714741a01ebe87bb578becada21515.js": "/crebutton/precache-manifest.59714741a01ebe87bb578becada21515.js",
     "service-worker.js": "/crebutton/service-worker.js",
     "static/media/icon-arrow.svg": "/crebutton/static/media/icon-arrow.68d956b3.svg",
     "static/media/icon-back.svg": "/crebutton/static/media/icon-back.adffeffe.svg",
@@ -20,7 +20,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b3e87dfe.js",
-    "static/js/2.2b63332a.chunk.js",
-    "static/js/main.acd9db6e.chunk.js"
+    "static/js/2.da6021c1.chunk.js",
+    "static/js/main.5783fbaa.chunk.js"
   ]
 }
