@@ -1,4 +1,11 @@
-import { NotFound, Main, Color, Shape, Effect, Transform } from '../pages';
+import {
+  NotFound,
+  Main,
+  Color,
+  Shape,
+  Effect,
+  Transform,
+} from '../pages/contents';
 
 export default [
   {

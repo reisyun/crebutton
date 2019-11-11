@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
+
 import BaseTemplate from '../components/templates/BaseTemplate';
-import PageTransition from '../components/PageTransition';
-import Result from '../components/organisms/Result';
 import Preview from '../components/organisms/Preview';
+import Result from '../components/organisms/Result';
 import Copy from '../components/organisms/Copy';
 
 function Layout({ custom }) {
+  const { transition } = useSelector(state => state.base);
+
   return (
     <BaseTemplate
       viewer={
@@ -18,7 +22,9 @@ function Layout({ custom }) {
       panel={
         <React.Fragment>
           <Copy />
-          <PageTransition>{custom}</PageTransition>
+          <CSSTransition in={transition} timeout={400} classNames="custom">
+            {custom}
+          </CSSTransition>
         </React.Fragment>
       }
     />

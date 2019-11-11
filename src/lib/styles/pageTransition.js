@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const timeout = 400;
+const duration = 400;
 
 export const pageTransition = css`
   .custom-enter,
@@ -13,6 +13,6 @@ export const pageTransition = css`
     opacity: 1;
     transform: scale(1);
     transition-property: opacity, transform;
-    transition-duration: ${timeout}ms, ${timeout}ms;
+    transition-duration: ${duration}ms, ${duration}ms;
   }
 `;

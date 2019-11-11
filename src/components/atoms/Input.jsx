@@ -8,6 +8,7 @@ const Input = styled.input.attrs(({ type, value, placeholder }) => ({
 }))`
   background: transparent;
   border: none;
+  outline: none;
   box-shadow: none;
 `;
 
