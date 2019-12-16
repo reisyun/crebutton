@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import media from '../../lib/utils/media';
-import Name from '../atoms/Name';
-import Icon from '../atoms/Icon';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import media from "../../lib/utils/media";
+import Name from "../atoms/Name";
+import Icon from "../atoms/Icon";
 
 const ContentItemBlock = styled.span`
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -1.5rem;
     width: 0;
@@ -30,6 +30,7 @@ const ContentItemBlock = styled.span`
     }
   `}
 `;
+
 const StyledName = styled(Name)`
   display: flex;
   align-items: center;
@@ -67,7 +68,7 @@ function ContentItem({ name, icon, onPageTransition }) {
 ContentItem.propTypes = {
   name: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  onPageTransition: PropTypes.func.isRequired,
+  onPageTransition: PropTypes.func.isRequired
 };
 
 export default ContentItem;

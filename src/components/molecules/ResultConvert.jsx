@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
-import media from '../../lib/utils/media';
-import { back } from '../../assets/svg';
-import Convert from '../atoms/Convert';
-import Icon from '../atoms/Icon';
+import React from "react";
+import PropTypes from "prop-types";
+import styled, { keyframes } from "styled-components";
+import media from "../../lib/utils/media";
+import { back } from "../../assets/svg";
+import Convert from "../atoms/Convert";
+import Icon from "../atoms/Icon";
 
 const rotate = keyframes`
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
 `;
+
 const ResultConvertBlock = styled(Convert)`
   position: absolute;
   right: 1.5rem;
@@ -19,6 +20,7 @@ const ResultConvertBlock = styled(Convert)`
   border-radius: 50%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 `;
+
 const StyledIcon = styled(Icon)`
   ${ResultConvertBlock}:hover & {
     animation: ${rotate} 0.5s;
@@ -38,7 +40,7 @@ function ResultConvert({ onConvertMode }) {
 }
 
 ResultConvert.propTypes = {
-  onConvertMode: PropTypes.func.isRequired,
+  onConvertMode: PropTypes.func.isRequired
 };
 
 export default ResultConvert;

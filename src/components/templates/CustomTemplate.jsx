@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import Header from '../../components/organisms/Header';
+import React from "react";
+import PropTypes from "prop-types";
+import styled, { css } from "styled-components";
+import Header from "../../components/organisms/Header";
 
 const Custom = styled.div`
   overflow-y: auto;
   height: inherit;
 `;
+
 const Container = styled.div`
   margin-top: 1.5rem;
   padding: 0 1.5rem;
@@ -40,7 +41,7 @@ function CustomTemplate({ children, title, icon }) {
 CustomTemplate.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
   title: PropTypes.string.isRequired,
-  icon: PropTypes.node,
+  icon: PropTypes.node
 };
 
 export default CustomTemplate;

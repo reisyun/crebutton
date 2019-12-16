@@ -16,6 +16,7 @@ const vertical = keyframes`
     margin-top: -0.5rem;
   }
 `;
+
 const PreviewConvertBlcok = styled(Convert)`
   position: absolute;
   left: 0;
@@ -23,6 +24,7 @@ const PreviewConvertBlcok = styled(Convert)`
   bottom: 0;
   padding: 0.5rem 0;
 `;
+
 const StyledIcon = styled(Icon)`
   margin-left: 0.5rem;
 
