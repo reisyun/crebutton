@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import media from '../../lib/utils/media';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
+import media from "../../lib/utils/media";
 
 const Base = styled.main`
   display: flex;
@@ -15,8 +16,10 @@ const Base = styled.main`
   `}
 `;
 const Viewer = styled.section`
+  position: relative;
+  top: ${props => (props.done ? "100vh" : "0vh")};
   width: 100%;
-  height: 100vh;
+  transition: top 0.5s ease-in-out;
 `;
 const Panel = styled.section`
   z-index: 200;
@@ -33,9 +36,11 @@ const Panel = styled.section`
 `;
 
 function BaseTemplate({ viewer, panel }) {
+  const { done } = useSelector(state => state.base);
+
   return (
     <Base>
-      <Viewer>{viewer}</Viewer>
+      <Viewer done={done}>{viewer}</Viewer>
       <Panel>{panel}</Panel>
     </Base>
   );
@@ -43,7 +48,7 @@ function BaseTemplate({ viewer, panel }) {
 
 BaseTemplate.propTypes = {
   viewer: PropTypes.element.isRequired,
-  panel: PropTypes.element.isRequired,
+  panel: PropTypes.element.isRequired
 };
 
 export default BaseTemplate;

@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
-import media from '../../lib/utils/media';
-import { arrow } from '../../assets/svg';
-import Convert from '../atoms/Convert';
-import Name from '../atoms/Name';
-import Icon from '../atoms/Icon';
+import React from "react";
+import PropTypes from "prop-types";
+import styled, { keyframes } from "styled-components";
+import media from "../../lib/utils/media";
+import { arrow } from "../../assets/svg";
+import Convert from "../atoms/Convert";
+import Name from "../atoms/Name";
+import Icon from "../atoms/Icon";
 
 const vertical = keyframes`
   from,
@@ -45,7 +45,7 @@ function PreviewConvert({ onConvertMode }) {
 }
 
 PreviewConvert.propTypes = {
-  onConvertMode: PropTypes.func.isRequired,
+  onConvertMode: PropTypes.func.isRequired
 };
 
 export default PreviewConvert;

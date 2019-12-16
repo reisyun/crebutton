@@ -1,13 +1,12 @@
-import React, { useCallback } from 'react';
-import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
-import { convertMode, slideBarControl } from '../../modules/base';
-import SlideBar from '../molecules/SlideBar.jsx';
-import MainButton from '../molecules/MainButton.jsx';
-import PreviewConvert from '../molecules/PreviewConvert';
+import React, { useCallback } from "react";
+import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import { convertMode, slideBarControl } from "../../modules/base";
+import SlideBar from "../molecules/SlideBar.jsx";
+import MainButton from "../molecules/MainButton.jsx";
+import PreviewConvert from "../molecules/PreviewConvert";
 
 const PreviewWrapper = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

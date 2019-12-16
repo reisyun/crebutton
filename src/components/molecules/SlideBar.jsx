@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Bar from '../atoms/Bar';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Bar from "../atoms/Bar";
 
 const SlideBarBlock = styled.div`
   display: flex;
@@ -15,24 +15,17 @@ const SlideBarBlock = styled.div`
 function SlideBar({ slideBar }) {
   const BAR_COUNT = 4;
 
-  const bars = _makeArray(BAR_COUNT).map(num => (
+  const bars = range(BAR_COUNT).map(num => (
     <Bar slideBar={slideBar} count={num} key={`slideBar-${num}`} />
   ));
 
   return <SlideBarBlock>{bars}</SlideBarBlock>;
 }
 
-// BAR_COUNT 개수만큼 배열에 인자를 추가
-const _makeArray = count => {
-  const arr = [];
-  for (let i = 1; i <= count; i = i + 1) {
-    arr.push(i);
-  }
-  return arr;
-};
+const range = length => Array.from({ length }, (_, i) => i);
 
 SlideBar.propTypes = {
-  slideBar: PropTypes.bool.isRequired,
+  slideBar: PropTypes.bool.isRequired
 };
 
 export default SlideBar;
