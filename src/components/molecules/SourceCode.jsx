@@ -1,19 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
-import Code from '../atoms/Code';
-import parse from 'html-react-parser';
+import React from "react";
+import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const SourceCodeBLlock = styled.pre`
-  padding: 1.5rem;
-  word-wrap: normal;
-  white-space: pre-line;
-`;
+// import styled from "styled-components";
+// import Code from "../atoms/Code";
 
-function SourceCode() {
+// const SourceCodeBLlock = styled.pre`
+//   padding: 1.5rem;
+//   word-wrap: normal;
+//   white-space: pre-line;
+// `;
+
+/**FIX */
+
+function SourceCode({ color }) {
+  const codeString = `button {
+  width: 280px;
+  height: 80px;
+  border-radius: 40px;
+  background: ${color};
+  color: #fff;
+  font-size: 2rem;
+}`;
+
   return (
-    <SourceCodeBLlock>
-      <Code>{parse('<span>button</span>')}</Code>
-    </SourceCodeBLlock>
+    <SyntaxHighlighter language="css" style={atomDark}>
+      {codeString}
+    </SyntaxHighlighter>
   );
 }
 

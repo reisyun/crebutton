@@ -12,12 +12,13 @@ const ResultWrapper = styled.div`
   top: -100vh;
   width: 100%;
   height: 100vh;
-  background-color: #2f3542;
+  background-color: #1d1f21; /* 2f3542 */
   transition: top 0.5s ease-in-out;
 `;
 
 function Result() {
   const { done } = useSelector(state => state.base);
+  const { color } = useSelector(state => state.custom);
   const dispatch = useDispatch();
 
   const onConvertMode = useCallback(() => {
@@ -26,7 +27,7 @@ function Result() {
 
   return (
     <ResultWrapper done={done}>
-      <SourceCode />
+      <SourceCode color={color} />
       <ResultConvert onConvertMode={onConvertMode} />
     </ResultWrapper>
   );
