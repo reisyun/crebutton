@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e278c5b52554c85511802cc6b2674ddb",
+    "revision": "5398004f1356a466cfa414b02623785e",
     "url": "/crebutton/index.html"
   },
   {
-    "revision": "de3e6f5a0b50015e823a",
-    "url": "/crebutton/static/js/2.4531a70e.chunk.js"
+    "revision": "d4d90744b171fb708f3c",
+    "url": "/crebutton/static/js/2.7de20732.chunk.js"
   },
   {
-    "revision": "fd228f9b9a68ce6b23a6cf8b0a38a0e3",
-    "url": "/crebutton/static/js/2.4531a70e.chunk.js.LICENSE"
+    "revision": "d43dd809f599efb8c6fd",
+    "url": "/crebutton/static/js/3.b18a21ea.chunk.js"
   },
   {
-    "revision": "fdd7c28971600b4d63fa",
-    "url": "/crebutton/static/js/main.68718fd3.chunk.js"
+    "revision": "f231859d6585c4cd5f80c344783ed269",
+    "url": "/crebutton/static/js/3.b18a21ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e66ba709b9793f6e45d",
-    "url": "/crebutton/static/js/runtime-main.0504a740.js"
+    "revision": "04bd9d5dbd1d800fb714",
+    "url": "/crebutton/static/js/main.4acb7764.chunk.js"
+  },
+  {
+    "revision": "ca81af49b273a166d181",
+    "url": "/crebutton/static/js/runtime-main.1ba03b00.js"
   },
   {
     "revision": "68d956b35b1a051d88b299c25d90fa4c",
